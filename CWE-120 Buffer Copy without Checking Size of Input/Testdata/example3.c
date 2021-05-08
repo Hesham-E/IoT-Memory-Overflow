@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 int main()
 {
     /*Online examples found from https://fresh2refresh.com/c-programming/c-buffer-manipulation-function/
@@ -47,6 +48,5 @@ int main()
         printf("  a[%d] = %d ,", i,    a[i]);
     // remove x from memory
     free(a);
-
     return 0;
 }
