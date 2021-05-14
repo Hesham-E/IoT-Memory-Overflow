@@ -814,3 +814,114 @@ test4.c
     ]
 }
 ----------------------------------------------------------------------------------------
+test5.c
+{
+    "_nodetype": "FileAST",
+    "coord": null,
+    "ext": [
+        {
+            "_nodetype": "FuncDef",
+            "coord": "./Testdata/test5.c:1:5",
+            "decl": {
+                "_nodetype": "Decl",
+                "name": "func",
+                "quals": [],
+                "storage": [],
+                "funcspec": [],
+                "coord": "./Testdata/test5.c:1:5",
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "coord": "./Testdata/test5.c:1:5",
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "declname": "func",
+                        "quals": [],
+                        "coord": "./Testdata/test5.c:1:5",
+                        "type": {
+                            "_nodetype": "IdentifierType",
+                            "names": [
+                                "int"
+                            ],
+                            "coord": "./Testdata/test5.c:1:1"
+                        }
+                    },
+                    "args": null
+                },
+                "init": null,
+                "bitsize": null
+            },
+            "body": {
+                "_nodetype": "Compound",
+                "coord": "./Testdata/test5.c:2:1",
+                "block_items": [
+                    {
+                        "_nodetype": "Decl",
+                        "name": "i",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test5.c:3:9",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "i",
+                            "quals": [],
+                            "coord": "./Testdata/test5.c:3:9",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "int"
+                                ],
+                                "coord": "./Testdata/test5.c:3:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "0",
+                            "coord": "./Testdata/test5.c:3:13"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "While",
+                        "coord": "./Testdata/test5.c:4:5",
+                        "cond": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "1",
+                            "coord": "./Testdata/test5.c:4:11"
+                        },
+                        "stmt": {
+                            "_nodetype": "Compound",
+                            "coord": "./Testdata/test5.c:5:1",
+                            "block_items": [
+                                {
+                                    "_nodetype": "UnaryOp",
+                                    "op": "p++",
+                                    "coord": "./Testdata/test5.c:6:9",
+                                    "expr": {
+                                        "_nodetype": "ID",
+                                        "name": "i",
+                                        "coord": "./Testdata/test5.c:6:9"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "_nodetype": "Return",
+                        "coord": "./Testdata/test5.c:9:5",
+                        "expr": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "0",
+                            "coord": "./Testdata/test5.c:9:12"
+                        }
+                    }
+                ]
+            },
+            "param_decls": null
+        }
+    ]
+}
+----------------------------------------------------------------------------------------
