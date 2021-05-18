@@ -40,8 +40,8 @@ test1.c
                                         "coord": "./Testdata/test1.c:1:11"
                                     }
                                 },
-                                "init": null,
-                                "bitsize": null
+                                "bitsize": null,
+                                "init": null
                             },
                             {
                                 "_nodetype": "Decl",
@@ -63,8 +63,8 @@ test1.c
                                         "coord": "./Testdata/test1.c:1:18"
                                     }
                                 },
-                                "init": null,
-                                "bitsize": null
+                                "bitsize": null,
+                                "init": null
                             }
                         ]
                     },
@@ -82,8 +82,8 @@ test1.c
                         }
                     }
                 },
-                "init": null,
-                "bitsize": null
+                "bitsize": null,
+                "init": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -114,7 +114,7 @@ test1.c
         }
     ]
 }
-----------------------------------------------------------------------------------------
+
 test2.c
 {
     "_nodetype": "FileAST",
@@ -157,8 +157,8 @@ test2.c
                                         "coord": "./Testdata/test2.c:1:11"
                                     }
                                 },
-                                "init": null,
-                                "bitsize": null
+                                "bitsize": null,
+                                "init": null
                             },
                             {
                                 "_nodetype": "Decl",
@@ -180,8 +180,8 @@ test2.c
                                         "coord": "./Testdata/test2.c:1:18"
                                     }
                                 },
-                                "init": null,
-                                "bitsize": null
+                                "bitsize": null,
+                                "init": null
                             }
                         ]
                     },
@@ -199,8 +199,8 @@ test2.c
                         }
                     }
                 },
-                "init": null,
-                "bitsize": null
+                "bitsize": null,
+                "init": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -403,7 +403,7 @@ test2.c
                         "coord": "./Testdata/test2.c:9:5",
                         "expr": {
                             "_nodetype": "ID",
-                            "name": "c",
+                            "name": "a",
                             "coord": "./Testdata/test2.c:9:12"
                         }
                     }
@@ -413,7 +413,7 @@ test2.c
         }
     ]
 }
-----------------------------------------------------------------------------------------
+
 test3.c
 {
     "_nodetype": "FileAST",
@@ -456,8 +456,8 @@ test3.c
                                         "coord": "./Testdata/test3.c:1:11"
                                     }
                                 },
-                                "init": null,
-                                "bitsize": null
+                                "bitsize": null,
+                                "init": null
                             },
                             {
                                 "_nodetype": "Decl",
@@ -479,8 +479,8 @@ test3.c
                                         "coord": "./Testdata/test3.c:1:18"
                                     }
                                 },
-                                "init": null,
-                                "bitsize": null
+                                "bitsize": null,
+                                "init": null
                             }
                         ]
                     },
@@ -498,8 +498,8 @@ test3.c
                         }
                     }
                 },
-                "init": null,
-                "bitsize": null
+                "bitsize": null,
+                "init": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -525,8 +525,8 @@ test3.c
                                 "coord": "./Testdata/test3.c:3:5"
                             }
                         },
-                        "init": null,
-                        "bitsize": null
+                        "bitsize": null,
+                        "init": null
                     },
                     {
                         "_nodetype": "Assignment",
@@ -568,7 +568,7 @@ test3.c
         }
     ]
 }
-----------------------------------------------------------------------------------------
+
 test4.c
 {
     "_nodetype": "FileAST",
@@ -602,8 +602,8 @@ test4.c
                     },
                     "args": null
                 },
-                "init": null,
-                "bitsize": null
+                "bitsize": null,
+                "init": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -629,8 +629,8 @@ test4.c
                                 "coord": "./Testdata/test4.c:3:5"
                             }
                         },
-                        "init": null,
-                        "bitsize": null
+                        "bitsize": null,
+                        "init": null
                     },
                     {
                         "_nodetype": "Assignment",
@@ -642,14 +642,25 @@ test4.c
                             "coord": "./Testdata/test4.c:4:5"
                         },
                         "rvalue": {
-                            "_nodetype": "FuncCall",
+                            "_nodetype": "BinaryOp",
+                            "op": "+",
                             "coord": "./Testdata/test4.c:4:9",
-                            "name": {
-                                "_nodetype": "ID",
-                                "name": "bar",
-                                "coord": "./Testdata/test4.c:4:9"
+                            "left": {
+                                "_nodetype": "FuncCall",
+                                "coord": "./Testdata/test4.c:4:9",
+                                "name": {
+                                    "_nodetype": "ID",
+                                    "name": "bar",
+                                    "coord": "./Testdata/test4.c:4:9"
+                                },
+                                "args": null
                             },
-                            "args": null
+                            "right": {
+                                "_nodetype": "Constant",
+                                "type": "int",
+                                "value": "1",
+                                "coord": "./Testdata/test4.c:4:17"
+                            }
                         }
                     },
                     {
@@ -725,8 +736,8 @@ test4.c
                     },
                     "args": null
                 },
-                "init": null,
-                "bitsize": null
+                "bitsize": null,
+                "init": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -813,7 +824,7 @@ test4.c
         }
     ]
 }
-----------------------------------------------------------------------------------------
+
 test5.c
 {
     "_nodetype": "FileAST",
@@ -847,8 +858,8 @@ test5.c
                     },
                     "args": null
                 },
-                "init": null,
-                "bitsize": null
+                "bitsize": null,
+                "init": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -924,4 +935,56 @@ test5.c
         }
     ]
 }
-----------------------------------------------------------------------------------------
+
+test6.c
+{
+    "_nodetype": "FileAST",
+    "coord": null,
+    "ext": [
+        {
+            "_nodetype": "FuncDef",
+            "coord": "./Testdata/test6.c:1:5",
+            "decl": {
+                "_nodetype": "Decl",
+                "name": "func",
+                "quals": [],
+                "storage": [],
+                "funcspec": [],
+                "coord": "./Testdata/test6.c:1:5",
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "coord": "./Testdata/test6.c:1:5",
+                    "args": {
+                        "_nodetype": "ParamList",
+                        "coord": "./Testdata/test6.c:1:15",
+                        "params": [
+                            {
+                                "_nodetype": "Decl",
+                                "name": "x",
+                                "quals": [],
+                                "storage": [],
+                                "funcspec": [],
+                                "coord": "./Testdata/test6.c:1:15",
+                                "type": {
+                                    "_nodetype": "TypeDecl",
+                                    "declname": "x",
+                                    "quals": [],
+                                    "coord": "./Testdata/test6.c:1:15",
+                                    "type": {
+                                        "_nodetype": "IdentifierType",
+                                        "names": [
+                                            "int"
+                                        ],
+                                        "coord": "./Testdata/test6.c:1:11"
+                                    }
+                                },
+                                "bitsize": null,
+                                "init": null
+                            }
+                        ]
+                    },
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "declname": "func",
+                        "quals": [],
+                        "coord": "./Testdata/test6.c:1:5"

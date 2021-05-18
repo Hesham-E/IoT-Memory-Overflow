@@ -6,5 +6,5 @@ int func (int a, int b)
     double y = 2;
     double z = x - y;
     c = a - b;
-    return c;
+    return a;
 }
