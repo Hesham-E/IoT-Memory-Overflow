@@ -55,9 +55,9 @@ def CheckerProcessor(filepath, writer):
                             totalVulnerabilityFound += 1
                             writer.writerow([githubID, year, filepath,
                                             lineDict[vul]['line'].strip(), vulnerability["CWE"], 1, lineDict[vul]['snippet']])
-                # if vulnerability["CWE"] == 190:
-                #     print('Checking for \"' + vulnerability["FullName"] + '\" in file ', filepath)
-                #     print('-----------------------------------------------------------------------------\n')
+                if vulnerability["CWE"] == 190:
+                    print('Checking for \"' + vulnerability["FullName"] + '\" in file ', filepath)
+                    print('-----------------------------------------------------------------------------\n')
 
         if totalVulnerabilityFound == 0:
             print('No vulnerability found in file: ', filepath)

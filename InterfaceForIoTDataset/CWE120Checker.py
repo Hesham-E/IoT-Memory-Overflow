@@ -7,28 +7,24 @@ functionsREGEX = ["(scanf[ ]*\([ ]*\"%s\")|(scanf\(.{1,}[,][ ]*\".*%s.*\")",
                   "(memcpy[ ]*\(.{1,}[,].{1,}\))", 
                   "(memmove[ ]*\(.{1,}[,].{1,}\))", 
                   "(memset[ ]*\(.{1,}[,].{1,}\))", 
-                  "(strncat[ ]*\(.{1,}[,].{1,}[,].{1,}\))", 
                   "(strcat[ ]*\(.{1,}[,].{1,}\))", 
-                  "(strncpy[ ]*\(.{1,}[,].{1,}[,].{1,}\))", 
                   "((sprintf)|(vsprintf)|(swprintf)|(vswprintf)|(_stprintf)|(_vstprintf))([ ]*\(.{1,}[,])",
                   "(MultiByteToWideChar[ ]*\(.{1,}[,].{1,}[,].{1,}[,].{1,}[,].{1,}[,].{1,}\))",
                   "(strtrns[ ]*\(.{1,}[,].{1,}[,].{1,}[,].{1,}\))", 
                   "(realpath[ ]*\(.{1,}[,].{1,}\))", 
                   "((getopt)|(getopt_long))([ ]*\(.{1,}[,].{1,}[,].{1,}\))", 
                   "(getwd[ ]*\(.{1,}[,].{1,}\))", 
-                  "((getchar)|(fgetc)|(getc)|(fread)|(_gettc))([ ]*\(.*\))"]
+                  "((getchar)|(fgetc)|(getc)|(fread)|(_gettc))([ ]*\(.*\))",
+                  "(bcmp[ ]*\(.{1,}[,].{1,}\))", #This and Below obtained from https://clang.llvm.org/docs/analyzer/checkers.html#security
+                  "(bcopy[ ]*\(.{1,}[,].{1,}\))",
+                  "(bzero[ ]*\(.{1,}[,].{1,}\))",
+                  "(getpw[ ]*\(.{1,}[,].{1,}\))",
+                  "(mkstemp[ ]*\(.{1,}[,].{1,}\))", #Warn when ‘mkstemp’ is passed fewer than 6 X’s in the format string.
+                  "(mktemp[ ]*\(.{1,}[,].{1,}\))",
+                  "(memset[ ]*\(.{1,}[,].{1,}\))",
+                  "(memset[ ]*\(.{1,}[,].{1,}\))",
+                  "(memset[ ]*\(.{1,}[,].{1,}\))"]
                   
-def findFunctionCall (line):
-    for functionREGEX in functionsREGEX:
-        functionREGEX = '(?<!\/\/)' + functionREGEX #Expression to ensure that line is not a comment 
-        lineNoWhiteSpace = "".join(line.split()) #Remove spaces since negative lookbehind pattern needs a definitive width
-        match = re.search(functionREGEX, lineNoWhiteSpace)
-        if match:
-            coord = match.span()
-            if coord[0] > line.find('//'): #Explicitly check that the match is before the comment
-                return True
-    return False
-
 def findFunctionCall (file):
     lineDict = dict()
     print('Checking for \"CWE-120: Buffer Copy without Checking Size of Input\" in file ',file.name)

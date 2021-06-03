@@ -48,7 +48,7 @@ totalVulnerabilityFound = 0
 totalVulnerableFile = 0
 with io.open('vulnerability.csv', 'w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
-    writer.writerow(["GithubID","Year","FullPath","Codesnippet","CWE","isTrueVulnerable"])
+    writer.writerow(["GithubID","Year","FullPath","Codesnippet","CWE","isTrueVulnerable", "Codesnippet5"])
     for dirpath, dirs, files in os.walk("../../Dataset Download/2021"):
         for filename in files:
             totalFile+=1
