@@ -40,8 +40,8 @@ test1.c
                                         "coord": "./Testdata/test1.c:1:11"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             },
                             {
                                 "_nodetype": "Decl",
@@ -63,8 +63,8 @@ test1.c
                                         "coord": "./Testdata/test1.c:1:18"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             }
                         ]
                     },
@@ -82,8 +82,8 @@ test1.c
                         }
                     }
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -223,8 +223,8 @@ test2.c
                                         "coord": "./Testdata/test2.c:1:11"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             },
                             {
                                 "_nodetype": "Decl",
@@ -246,8 +246,8 @@ test2.c
                                         "coord": "./Testdata/test2.c:1:18"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             }
                         ]
                     },
@@ -265,8 +265,8 @@ test2.c
                         }
                     }
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -522,8 +522,8 @@ test3.c
                                         "coord": "./Testdata/test3.c:1:11"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             },
                             {
                                 "_nodetype": "Decl",
@@ -545,8 +545,8 @@ test3.c
                                         "coord": "./Testdata/test3.c:1:18"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             }
                         ]
                     },
@@ -564,8 +564,8 @@ test3.c
                         }
                     }
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -591,8 +591,8 @@ test3.c
                                 "coord": "./Testdata/test3.c:3:5"
                             }
                         },
-                        "bitsize": null,
-                        "init": null
+                        "init": null,
+                        "bitsize": null
                     },
                     {
                         "_nodetype": "Assignment",
@@ -668,8 +668,8 @@ test4.c
                     },
                     "args": null
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -695,8 +695,8 @@ test4.c
                                 "coord": "./Testdata/test4.c:3:5"
                             }
                         },
-                        "bitsize": null,
-                        "init": null
+                        "init": null,
+                        "bitsize": null
                     },
                     {
                         "_nodetype": "Assignment",
@@ -802,8 +802,8 @@ test4.c
                     },
                     "args": null
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -933,8 +933,8 @@ test5.c
                                         "coord": "./Testdata/test5.c:1:11"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             }
                         ]
                     },
@@ -952,8 +952,8 @@ test5.c
                         }
                     }
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -1081,8 +1081,8 @@ test6.c
                                         "coord": "./Testdata/test6.c:1:11"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             }
                         ]
                     },
@@ -1100,8 +1100,8 @@ test6.c
                         }
                     }
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -1310,8 +1310,8 @@ test7.c
                                         "coord": "./Testdata/test7.c:1:10"
                                     }
                                 },
-                                "bitsize": null,
-                                "init": null
+                                "init": null,
+                                "bitsize": null
                             }
                         ]
                     },
@@ -1329,8 +1329,8 @@ test7.c
                         }
                     }
                 },
-                "bitsize": null,
-                "init": null
+                "init": null,
+                "bitsize": null
             },
             "body": {
                 "_nodetype": "Compound",
@@ -1361,4 +1361,489 @@ test7.c
                                 }
                             },
                             "right": {
-                                "_nodetype": "Constant"
+                                "_nodetype": "Constant",
+                                "type": "int",
+                                "value": "0",
+                                "coord": "./Testdata/test7.c:3:35"
+                            }
+                        },
+                        "iftrue": {
+                            "_nodetype": "Compound",
+                            "coord": "./Testdata/test7.c:4:1",
+                            "block_items": [
+                                {
+                                    "_nodetype": "Return",
+                                    "coord": "./Testdata/test7.c:5:9",
+                                    "expr": {
+                                        "_nodetype": "ID",
+                                        "name": "a",
+                                        "coord": "./Testdata/test7.c:5:16"
+                                    }
+                                }
+                            ]
+                        },
+                        "iffalse": null
+                    },
+                    {
+                        "_nodetype": "Return",
+                        "coord": "./Testdata/test7.c:7:5",
+                        "expr": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "0",
+                            "coord": "./Testdata/test7.c:7:12"
+                        }
+                    }
+                ]
+            },
+            "param_decls": null
+        }
+    ]
+}
+
+test8.c
+{
+    "_nodetype": "FileAST",
+    "coord": null,
+    "ext": [
+        {
+            "_nodetype": "FuncDef",
+            "coord": "./Testdata/test8.c:1:5",
+            "decl": {
+                "_nodetype": "Decl",
+                "name": "func",
+                "quals": [],
+                "storage": [],
+                "funcspec": [],
+                "coord": "./Testdata/test8.c:1:5",
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "coord": "./Testdata/test8.c:1:5",
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "declname": "func",
+                        "quals": [],
+                        "coord": "./Testdata/test8.c:1:5",
+                        "type": {
+                            "_nodetype": "IdentifierType",
+                            "names": [
+                                "int"
+                            ],
+                            "coord": "./Testdata/test8.c:1:1"
+                        }
+                    },
+                    "args": null
+                },
+                "init": null,
+                "bitsize": null
+            },
+            "body": {
+                "_nodetype": "Compound",
+                "coord": "./Testdata/test8.c:2:1",
+                "block_items": [
+                    {
+                        "_nodetype": "Decl",
+                        "name": "a",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test8.c:3:9",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "a",
+                            "quals": [],
+                            "coord": "./Testdata/test8.c:3:9",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "int"
+                                ],
+                                "coord": "./Testdata/test8.c:3:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "1",
+                            "coord": "./Testdata/test8.c:3:13"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Assignment",
+                        "op": "+=",
+                        "coord": "./Testdata/test8.c:4:5",
+                        "lvalue": {
+                            "_nodetype": "ID",
+                            "name": "a",
+                            "coord": "./Testdata/test8.c:4:5"
+                        },
+                        "rvalue": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "2147483649",
+                            "coord": "./Testdata/test8.c:4:10"
+                        }
+                    },
+                    {
+                        "_nodetype": "Decl",
+                        "name": "b",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test8.c:6:19",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "b",
+                            "quals": [],
+                            "coord": "./Testdata/test8.c:6:19",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "unsigned",
+                                    "long"
+                                ],
+                                "coord": "./Testdata/test8.c:6:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "18446744073709551615",
+                            "coord": "./Testdata/test8.c:6:23"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Assignment",
+                        "op": "=",
+                        "coord": "./Testdata/test8.c:8:5",
+                        "lvalue": {
+                            "_nodetype": "ID",
+                            "name": "b",
+                            "coord": "./Testdata/test8.c:8:5"
+                        },
+                        "rvalue": {
+                            "_nodetype": "BinaryOp",
+                            "op": "+",
+                            "coord": "./Testdata/test8.c:8:9",
+                            "left": {
+                                "_nodetype": "ID",
+                                "name": "b",
+                                "coord": "./Testdata/test8.c:8:9"
+                            },
+                            "right": {
+                                "_nodetype": "Constant",
+                                "type": "int",
+                                "value": "1",
+                                "coord": "./Testdata/test8.c:8:13"
+                            }
+                        }
+                    },
+                    {
+                        "_nodetype": "UnaryOp",
+                        "op": "p++",
+                        "coord": "./Testdata/test8.c:9:5",
+                        "expr": {
+                            "_nodetype": "ID",
+                            "name": "b",
+                            "coord": "./Testdata/test8.c:9:5"
+                        }
+                    },
+                    {
+                        "_nodetype": "UnaryOp",
+                        "op": "--",
+                        "coord": "./Testdata/test8.c:10:7",
+                        "expr": {
+                            "_nodetype": "ID",
+                            "name": "b",
+                            "coord": "./Testdata/test8.c:10:7"
+                        }
+                    },
+                    {
+                        "_nodetype": "Decl",
+                        "name": "c",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test8.c:11:20",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "c",
+                            "quals": [],
+                            "coord": "./Testdata/test8.c:11:20",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "unsigned",
+                                    "short"
+                                ],
+                                "coord": "./Testdata/test8.c:11:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "1",
+                            "coord": "./Testdata/test8.c:11:24"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Decl",
+                        "name": "o",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test8.c:12:11",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "o",
+                            "quals": [],
+                            "coord": "./Testdata/test8.c:12:11",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "short"
+                                ],
+                                "coord": "./Testdata/test8.c:12:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "1",
+                            "coord": "./Testdata/test8.c:12:15"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Decl",
+                        "name": "d",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test8.c:13:19",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "d",
+                            "quals": [],
+                            "coord": "./Testdata/test8.c:13:19",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "unsigned",
+                                    "long"
+                                ],
+                                "coord": "./Testdata/test8.c:13:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "10",
+                            "coord": "./Testdata/test8.c:13:23"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Decl",
+                        "name": "z",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test8.c:14:19",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "z",
+                            "quals": [],
+                            "coord": "./Testdata/test8.c:14:19",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "unsigned",
+                                    "char"
+                                ],
+                                "coord": "./Testdata/test8.c:14:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "char",
+                            "value": "'a'",
+                            "coord": "./Testdata/test8.c:14:23"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Assignment",
+                        "op": "-=",
+                        "coord": "./Testdata/test8.c:15:5",
+                        "lvalue": {
+                            "_nodetype": "ID",
+                            "name": "d",
+                            "coord": "./Testdata/test8.c:15:5"
+                        },
+                        "rvalue": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "2",
+                            "coord": "./Testdata/test8.c:15:10"
+                        }
+                    },
+                    {
+                        "_nodetype": "Return",
+                        "coord": "./Testdata/test8.c:16:5",
+                        "expr": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "0",
+                            "coord": "./Testdata/test8.c:16:12"
+                        }
+                    }
+                ]
+            },
+            "param_decls": null
+        }
+    ]
+}
+
+test9.c
+{
+    "_nodetype": "FileAST",
+    "coord": null,
+    "ext": [
+        {
+            "_nodetype": "FuncDef",
+            "coord": "./Testdata/test9.c:1:5",
+            "decl": {
+                "_nodetype": "Decl",
+                "name": "main",
+                "quals": [],
+                "storage": [],
+                "funcspec": [],
+                "coord": "./Testdata/test9.c:1:5",
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "coord": "./Testdata/test9.c:1:5",
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "declname": "main",
+                        "quals": [],
+                        "coord": "./Testdata/test9.c:1:5",
+                        "type": {
+                            "_nodetype": "IdentifierType",
+                            "names": [
+                                "int"
+                            ],
+                            "coord": "./Testdata/test9.c:1:1"
+                        }
+                    },
+                    "args": null
+                },
+                "init": null,
+                "bitsize": null
+            },
+            "body": {
+                "_nodetype": "Compound",
+                "coord": "./Testdata/test9.c:2:1",
+                "block_items": [
+                    {
+                        "_nodetype": "Decl",
+                        "name": "a",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test9.c:3:9",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "a",
+                            "quals": [],
+                            "coord": "./Testdata/test9.c:3:9",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "int"
+                                ],
+                                "coord": "./Testdata/test9.c:3:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "2147483647",
+                            "coord": "./Testdata/test9.c:3:13"
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Decl",
+                        "name": "b",
+                        "quals": [],
+                        "storage": [],
+                        "funcspec": [],
+                        "coord": "./Testdata/test9.c:4:9",
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "declname": "b",
+                            "quals": [],
+                            "coord": "./Testdata/test9.c:4:9",
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "names": [
+                                    "int"
+                                ],
+                                "coord": "./Testdata/test9.c:4:5"
+                            }
+                        },
+                        "init": {
+                            "_nodetype": "BinaryOp",
+                            "op": "+",
+                            "coord": "./Testdata/test9.c:4:13",
+                            "left": {
+                                "_nodetype": "ID",
+                                "name": "a",
+                                "coord": "./Testdata/test9.c:4:13"
+                            },
+                            "right": {
+                                "_nodetype": "Constant",
+                                "type": "int",
+                                "value": "10",
+                                "coord": "./Testdata/test9.c:4:17"
+                            }
+                        },
+                        "bitsize": null
+                    },
+                    {
+                        "_nodetype": "Assignment",
+                        "op": "=",
+                        "coord": "./Testdata/test9.c:5:5",
+                        "lvalue": {
+                            "_nodetype": "ID",
+                            "name": "a",
+                            "coord": "./Testdata/test9.c:5:5"
+                        },
+                        "rvalue": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "3",
+                            "coord": "./Testdata/test9.c:5:9"
+                        }
+                    },
+                    {
+                        "_nodetype": "Return",
+                        "coord": "./Testdata/test9.c:6:5",
+                        "expr": {
+                            "_nodetype": "Constant",
+                            "type": "int",
+                            "value": "0",
+                            "coord": "./Testdata/test9.c:6:12"
+                        }
+                    }
+                ]
+            },
+            "param_decls": null
+        }
+    ]
+}
+

@@ -1,21 +1,40 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-double globalVar = 100.1;
+void flushInput();
+
 int main ()
 {
-    int SIZE = 10;
-    char str1[] = "Hello1";
-    char str2[] = "Bye";
-    char* str3 = "Pointer";
-    char* str4 = &str2;
-    char* str5;
-    str5 = &str1;
-    str5 = &str2[1];
-    str5 = *str3;
-    char str6[SIZE];
-    char text[10] = "";
-    //memset, memcpy, memmove, malloc, calloc, strcpy
-    memmove(str2, str1, 4);
+    int shift;
+    char input[10];
+    char shiftedInput[9];
+
+    printf("\nPlease enter a number for the Caesar shift: ");
+    scanf("%d", &shift);
+    flushInput();
+    printf("\nPlease enter a phrase for the Caesar shift: ");
+    scanf("%s", input);
+    flushInput();
+
+    strcpy(shiftedInput, input);
+    for (int i = 0; i < 9; i++)
+    {
+        shiftedInput[i] = shiftedInput[i] + shift;
+    }
+
+    printf("\nThe recieved input was \"%s\"", input);
+    strcpy(input, shiftedInput);
+    printf("\nThe Caesar shift is now \"%s\"", input);
+
     return 0;
+}
+
+void flushInput()
+{
+    char c;
+    while((c = getchar()) != '\n' && c != EOF)
+    {
+
+    }
 }
