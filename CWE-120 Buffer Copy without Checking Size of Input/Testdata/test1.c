@@ -6,9 +6,10 @@ void flushInput();
 
 int main ()
 {
+    const int SIZE = 10;
     int shift;
-    char input[10];
-    char shiftedInput[9];
+    char input[SIZE];
+    char shiftedInput[SIZE - 1];
 
     printf("\nPlease enter a number for the Caesar shift: ");
     scanf("%d", &shift);
@@ -18,7 +19,7 @@ int main ()
     flushInput();
 
     strcpy(shiftedInput, input);
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < SIZE - 1; i++)
     {
         shiftedInput[i] = shiftedInput[i] + shift;
     }
