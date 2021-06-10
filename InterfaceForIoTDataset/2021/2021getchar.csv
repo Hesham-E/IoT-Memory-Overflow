@@ -1,0 +1,79 @@
+,GithubID,Year,FullPath,Codesnippet,CWE,isTrueVulnerable,Codesnippet5
+440,2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\hal\swi_uart_at90usb1287_asf.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\hal\swi_uart_at90usb1287_asf.c,"usart_serial_getchar(instance->usart_instance, data);",120,1,"        if (rx_complete)
+        {
+            usart_serial_getchar(instance->usart_instance, data);
+            //if ((*data == 0x7D) || (*data == 0x7F))
+            // Sometimes bit data from device is stretched, resulting in a
+"
+524,2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\Src\syscalls.c,Dataset Download,../../Dataset Download/2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\Src\syscalls.c,extern int __io_getchar(void) __attribute__((weak));,120,1,"/* Variables */
+extern int __io_putchar(int ch) __attribute__((weak));
+extern int __io_getchar(void) __attribute__((weak));
+
+
+"
+525,2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\Src\syscalls.c,Dataset Download,../../Dataset Download/2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\Src\syscalls.c,*ptr++ = __io_getchar();,120,1,"	for (DataIdx = 0; DataIdx < len; DataIdx++)
+	{
+		*ptr++ = __io_getchar();
+	}
+
+"
+588,2021\cslim\test\libglusterfs\call-stub.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\call-stub.cpp.c,extern int getchar (void);,120,1,"
+
+extern int getchar (void);
+
+# 550 ""/usr/include/stdio.h"" 3 4
+"
+2643,2021\deneyapkart-arduino-core\tools\sdk\include\newlib\stdio.h,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\tools\sdk\include\newlib\stdio.h,#define	getchar()	getc(stdin),120,1,"#endif /* !__CUSTOM_FILE_IO__ */
+
+#define	getchar()	getc(stdin)
+#define	putchar(x)	putc(x, stdout)
+
+"
+4613,2021\haas-mini-program\engine\duktape_engine\repl.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\repl.c,static int32_t repl_getchar(char *inbuf),120,1,"static char repl_message[REPL_OUTBUF_SIZE] = {0};
+
+static int32_t repl_getchar(char *inbuf)
+{
+    uart_dev_t repl_stdio;
+"
+4616,2021\haas-mini-program\engine\duktape_engine\repl.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\repl.c,while (repl_getchar(&c) == 1),120,1,"    }
+
+    while (repl_getchar(&c) == 1)
+    {
+        if (c == RET_CHAR || c == END_CHAR)
+"
+7784,2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\include\wlan_cli_pub.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\include\wlan_cli_pub.h,int cli_getchar(char *inbuf);,120,1," * \return error code otherwise.
+ */
+int cli_getchar(char *inbuf);
+int cli_getchars(char *inbuf, int len);
+int cli_get_all_chars_len(void);
+"
+8232,2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,while (cli_getchar(&inbuf[*bp]) == 1),120,1,"    }
+
+    while (cli_getchar(&inbuf[*bp]) == 1)
+    {
+#if CFG_SUPPORT_BKREG
+"
+8233,2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,if(0 == cli_getchar(&ch)),120,1,"                    
+                    while(left--) {
+                        if(0 == cli_getchar(&ch))
+                        { 
+                            memset(inbuf, 0, len);
+"
+8244,2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,int cli_getchar(char *inbuf),120,1,"}
+
+int cli_getchar(char *inbuf)
+{
+    if (bk_uart_recv(CLI_UART, inbuf, 1, BEKEN_WAIT_FOREVER) == 0)
+"
+8458,2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\system.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\system.h,#  define getchar() getchar_unlocked (),120,1,"# ifdef HAVE_GETCHAR_UNLOCKED
+#  undef getchar
+#  define getchar() getchar_unlocked ()
+# endif
+# ifdef HAVE_FPUTC_UNLOCKED
+"
+10631,2021\x-cube-subg2\Middlewares\ST\Contiki-NG_STM32_Library\Src\console.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\ST\Contiki-NG_STM32_Library\Src\console.c,int __io_getchar(void),120,1," * @retval Character acquired from standard input
+ */
+int __io_getchar(void)
+{
+  return uart_receive_char();
+"

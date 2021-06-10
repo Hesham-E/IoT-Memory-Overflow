@@ -1,0 +1,709 @@
+GithubID,Year,FullPath,Codesnippet,CWE,isTrueVulnerable,Codesnippet5,
+2021\arduino-learn-circuit\libraries\pubsubclient-master\src\PubSubClient.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\pubsubclient-master\src\PubSubClient.cpp,"memmove(buffer+llen+2,buffer+llen+3,tl); */",120,1,"                    if (callback) {
+                        uint16_t tl = (buffer[llen+1]<<8)+buffer[llen+2]; /* topic length in bytes */
+                        memmove(buffer+llen+2,buffer+llen+3,tl); /* move topic inside buffer 1 byte to front */
+                        buffer[llen+2+tl] = 0; /* end the topic as a 'C' string with \x00 */
+                        char *topic = (char*) buffer+llen+2;
+",llen may not be defined
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_client.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_client.c,"memmove(csr + (csr_max_size - csr_der_size), csr, csr_der_size);",120,0,"    // Move the DER CSR to the end of the buffer, so we can encode it into
+    // PEM in place.
+    memmove(csr + (csr_max_size - csr_der_size), csr, csr_der_size);
+
+    *csr_size = csr_max_size;
+",
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,"memmove(&padded_key[40], &raw_key[32], 32);",120,0,"void atcacert_public_key_add_padding(const uint8_t raw_key[64], uint8_t padded_key[72])
+{
+    memmove(&padded_key[40], &raw_key[32], 32); // Move Y to padded position
+    memset(&padded_key[36], 0, 4);              // Add Y padding bytes
+    memmove(&padded_key[4], &raw_key[0], 32);   // Move X to padded position
+",
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,"memmove(&padded_key[4], &raw_key[0], 32);",120,0,"    memmove(&padded_key[40], &raw_key[32], 32); // Move Y to padded position
+    memset(&padded_key[36], 0, 4);              // Add Y padding bytes
+    memmove(&padded_key[4], &raw_key[0], 32);   // Move X to padded position
+    memset(&padded_key[0], 0, 4);               // Add X padding bytes
+}
+",
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,"memmove(&raw_key[0], &padded_key[4], 32);",120,0,"void atcacert_public_key_remove_padding(const uint8_t padded_key[72], uint8_t raw_key[64])
+{
+    memmove(&raw_key[0], &padded_key[4], 32);   // Move X
+    memmove(&raw_key[32], &padded_key[40], 32); // Move Y
+}
+",
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\atcacert\atcacert_def.c,"memmove(&raw_key[32], &padded_key[40], 32);",120,0,"{
+    memmove(&raw_key[0], &padded_key[4], 32);   // Move X
+    memmove(&raw_key[32], &padded_key[40], 32); // Move Y
+}
+
+",
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\basic\atca_basic_privwrite.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\basic\atca_basic_privwrite.c,"memmove(&serial_num[4], &serial_num[8], 5);",120,0,"            }
+            // Make the SN continuous by moving SN[4:8] right after SN[0:3]
+            memmove(&serial_num[4], &serial_num[8], 5);
+
+            // Send the random Nonce command
+",
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\jwt\atca_jwt.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\jwt\atca_jwt.c,"memmove(jwt->buf + jwt->buflen - jwt->cur, &jwt->buf[i], rem);",120,0,"    rem = jwt->cur - i;
+    /* Move the payload to make room for the encoding */
+    memmove(jwt->buf + jwt->buflen - jwt->cur, &jwt->buf[i], rem);
+
+    /* Encode the payload into the buffer */
+",
+2021\cslim\test\libglusterfs\call-stub.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\call-stub.cpp.c,"extern void *memmove (void *__dest, const void *__src, size_t __n)",120,1,"
+
+extern void *memmove (void *__dest, const void *__src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+",Importing memmove which in itself is vulnerable without any checks
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(pMem->z, &pMem->z[2], pMem->n);",120,?,"
+      pMem->n -= 2;
+      memmove(pMem->z, &pMem->z[2], pMem->n);
+      pMem->z[pMem->n] = '\0';
+      pMem->z[pMem->n+1] = '\0';
+",
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(&zDel[n], zDel, nByte+1);",120,?,"              rc = sqlite3CantopenError(33551);
+            }else{
+              memmove(&zDel[n], zDel, nByte+1);
+              memcpy(zDel, zIn, n);
+              nByte += n;
+",
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(ptr, ptr+2, 2*(pPage->nCell - idx));",120,?,"                       - pPage->childPtrSize - 8;
+  }else{
+    memmove(ptr, ptr+2, 2*(pPage->nCell - idx));
+    ((&data[hdr+3])[0] = (u8)((pPage->nCell)>>8), (&data[hdr+3])[1] = (u8)(pPage->nCell));
+    pPage->nFree += 2;
+",
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(pIns+2, pIns, 2*(pPage->nCell - i));",120,?,"    }
+    pIns = pPage->aCellIdx + i*2;
+    memmove(pIns+2, pIns, 2*(pPage->nCell - i));
+    ((pIns)[0] = (u8)((idx)>>8), (pIns)[1] = (u8)(idx));
+    pPage->nCell++;
+",
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(pSlot, pCArray->apCell[i], sz);",120,?,"
+                        ;
+    memmove(pSlot, pCArray->apCell[i], sz);
+    ((pCellptr)[0] = (u8)(((pSlot - aData))>>8), (pCellptr)[1] = (u8)((pSlot - aData)));
+    pCellptr += 2;
+",
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(pPg->aCellIdx, &pPg->aCellIdx[nShift*2], nCell*2);",120,?,"
+    int nShift = pageFreeArray(pPg, iOld, iNew-iOld, pCArray);
+    memmove(pPg->aCellIdx, &pPg->aCellIdx[nShift*2], nCell*2);
+    nCell -= nShift;
+  }
+",
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(&pCellptr[nAdd*2], pCellptr, nCell*2);",120,?,"    ((void) (0));
+    pCellptr = pPg->aCellIdx;
+    memmove(&pCellptr[nAdd*2], pCellptr, nCell*2);
+    if( pageInsertArray(
+          pPg, pBegin, &pData, pCellptr,
+",
+2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\sqlite312-cpp\sqlite3.cpp.c,"memmove(&pCellptr[2], pCellptr, (nCell - iCell) * 2);",120,?,"
+      pCellptr = &pPg->aCellIdx[iCell * 2];
+      memmove(&pCellptr[2], pCellptr, (nCell - iCell) * 2);
+      nCell++;
+      if( pageInsertArray(
+",
+2021\deneyapkart-arduino-core\cores\esp32\esp32-hal-i2c.c,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\esp32-hal-i2c.c,"memmove(&i2c->dq[i2c->queueCount++],&dqx,sizeof(I2C_DATA_QUEUE_t));",120,?,"        if(tq!=NULL) { // ok
+            i2c->dq = tq;
+            memmove(&i2c->dq[i2c->queueCount++],&dqx,sizeof(I2C_DATA_QUEUE_t));
+        } else { // bad stuff, unable to allocate more memory!
+            log_e(""realloc Failure"");
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(newbuffer, sso.buff, sizeof(sso.buff));",120,?,"        if (isSSO()) {
+            // Copy the SSO buffer into allocated space
+            memmove(newbuffer, sso.buff, sizeof(sso.buff));
+        }
+        if (newSize > oldSize)
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(wbuffer(), cstr, length + 1);",120,?,"    }
+    setLen(length);
+    memmove(wbuffer(), cstr, length + 1);
+    return *this;
+}
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(wbuffer(), rhs.buffer(), rhs.length() + 1);",120,?,"    if(buffer()) {
+        if(capacity() >= rhs.len()) {
+            memmove(wbuffer(), rhs.buffer(), rhs.length() + 1);
+            setLen(rhs.len());
+	    rhs.invalidate();
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(sso.buff, rhs.sso.buff, sizeof(sso.buff));",120,?,"    if (rhs.isSSO()) {
+        setSSO(true);
+        memmove(sso.buff, rhs.sso.buff, sizeof(sso.buff));
+    } else {
+        setSSO(false);
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(wbuffer() + len(), buffer(), len());",120,?,"        if (!reserve(newlen))
+            return 0;
+        memmove(wbuffer() + len(), buffer(), len());
+        setLen(newlen);
+        wbuffer()[len()] = 0;
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(wbuffer() + len(), cstr, length + 1);",120,?,"    if (cstr >= wbuffer() && cstr < wbuffer() + len())
+        // compatible with SSO in ram #6155 (case ""x += x.c_str()"")
+        memmove(wbuffer() + len(), cstr, length + 1);
+    else
+        // compatible with source in flash #6367
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(foundAt, replace.buffer(), replace.len());",120,?,"    if(diff == 0) {
+        while((foundAt = strstr(readFrom, find.buffer())) != NULL) {
+            memmove(foundAt, replace.buffer(), replace.len());
+            readFrom = foundAt + replace.len();
+        }
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(writeTo, readFrom, n);",120,?,"        while((foundAt = strstr(readFrom, find.buffer())) != NULL) {
+            unsigned int n = foundAt - readFrom;
+            memmove(writeTo, readFrom, n);
+            writeTo += n;
+            memmove(writeTo, replace.buffer(), replace.len());
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(writeTo, replace.buffer(), replace.len());",120,?,"            memmove(writeTo, readFrom, n);
+            writeTo += n;
+            memmove(writeTo, replace.buffer(), replace.len());
+            writeTo += replace.len();
+            readFrom = foundAt + find.len();
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(writeTo, readFrom, strlen(readFrom)+1);",120,?,"            setLen(len() + diff);
+        }
+        memmove(writeTo, readFrom, strlen(readFrom)+1);
+    } else {
+        unsigned int size = len(); // compute size needed for result
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(readFrom + diff, readFrom, len() - (readFrom - buffer()));",120,?,"        while(index >= 0 && (index = lastIndexOf(find, index)) >= 0) {
+            readFrom = wbuffer() + index + find.len();
+            memmove(readFrom + diff, readFrom, len() - (readFrom - buffer()));
+	    int newLen = len() + diff;
+            memmove(wbuffer() + index, replace.buffer(), replace.len());
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(wbuffer() + index, replace.buffer(), replace.len());",120,?,"            memmove(readFrom + diff, readFrom, len() - (readFrom - buffer()));
+	    int newLen = len() + diff;
+            memmove(wbuffer() + index, replace.buffer(), replace.len());
+            setLen(newLen);
+            wbuffer()[newLen] = 0;
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(writeTo, wbuffer() + index + count, newlen - index);",120,?,"    unsigned int newlen = len() - count;
+    setLen(newlen);
+    memmove(writeTo, wbuffer() + index + count, newlen - index);
+    wbuffer()[newlen] = 0;
+}
+",
+2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\WString.cpp,"memmove(wbuffer(), begin, newlen);",120,?,"    setLen(newlen);
+    if(begin > buffer())
+        memmove(wbuffer(), begin, newlen);
+    wbuffer()[newlen] = 0;
+}
+",
+2021\deneyapkart-arduino-core\libraries\00_LIBS\src\Adafruit_MQTT.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\libraries\00_LIBS\src\Adafruit_MQTT.cpp,"memmove(p, data, bLen);",120,?,"  }
+
+  memmove(p, data, bLen);
+  p += bLen;
+  len = p - packet;
+",
+2021\deneyapkart-arduino-core\tools\sdk\include\wpa_supplicant\os.h,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\tools\sdk\include\wpa_supplicant\os.h,"#define os_memmove(d, s, n) memmove((d), (s), (n))",120,?,"#endif
+#ifndef os_memmove
+#define os_memmove(d, s, n) memmove((d), (s), (n))
+#endif
+#ifndef os_memset
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"memmove(conn->rdbuf, conn->rdbuf + SCANNER_HACK_DRAIN, SCANNER_RDBUF_SIZE - SCANNER_HACK_DRAIN);",120,?,"                    if (conn->rdbuf_pos == SCANNER_RDBUF_SIZE)
+                    {
+                        memmove(conn->rdbuf, conn->rdbuf + SCANNER_HACK_DRAIN, SCANNER_RDBUF_SIZE - SCANNER_HACK_DRAIN);
+                        conn->rdbuf_pos -= SCANNER_HACK_DRAIN;
+                    }
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"memmove(conn->rdbuf, conn->rdbuf + consumed, conn->rdbuf_pos);",120,?,"
+                            conn->rdbuf_pos -= consumed;
+                            memmove(conn->rdbuf, conn->rdbuf + consumed, conn->rdbuf_pos);
+                        }
+                    }
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"memmove(conn->rdbuf, conn->rdbuf + PORT80_SCANNER_HACK_DRAIN, PORT80_SCANNER_RDBUF_SIZE - PORT80_SCANNER_HACK_DRAIN);",120,?,"                    if(conn->rdbuf_pos == PORT80_SCANNER_RDBUF_SIZE)
+                    {
+                        memmove(conn->rdbuf, conn->rdbuf + PORT80_SCANNER_HACK_DRAIN, PORT80_SCANNER_RDBUF_SIZE - PORT80_SCANNER_HACK_DRAIN);
+                        conn->rdbuf_pos -= PORT80_SCANNER_HACK_DRAIN;
+                    }
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"memmove(conn->rdbuf, conn->rdbuf + Kvjei9ffj83j_SCANNER_HACK_DRAIN, Kvjei9ffj83j_SCANNER_RDBUF_SIZE - Kvjei9ffj83j_SCANNER_HACK_DRAIN);",120,?,"                    if(conn->rdbuf_pos == Kvjei9ffj83j_SCANNER_RDBUF_SIZE)
+                    {
+                        memmove(conn->rdbuf, conn->rdbuf + Kvjei9ffj83j_SCANNER_HACK_DRAIN, Kvjei9ffj83j_SCANNER_RDBUF_SIZE - Kvjei9ffj83j_SCANNER_HACK_DRAIN);
+                        conn->rdbuf_pos -= Kvjei9ffj83j_SCANNER_HACK_DRAIN;
+                    }
+",
+2021\haas-mini-program\components\linkkit\infra\infra_httpc.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\linkkit\infra\infra_httpc.c,"memmove(data, &data[crlf_pos + 2], len - (crlf_pos + 2) + 1); */",120,?,"    client->response_code = atoi(data + 9);
+    httpc_debug(""Reading headers: %s"", data);
+    memmove(data, &data[crlf_pos + 2], len - (crlf_pos + 2) + 1); /* Be sure to move NULL-terminating char as well */
+    len -= (crlf_pos + 2);       /* remove status_line length */
+    client_data->is_chunked = IOT_FALSE;
+",
+2021\haas-mini-program\components\linkkit\infra\infra_httpc.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\linkkit\infra\infra_httpc.c,"memmove(data, ptr_body_end + 4, len + 1);",120,?,"    /* the remain length is client_data->response_content_len - len */
+    len = len - (ptr_body_end + 4 - data);
+    memmove(data, ptr_body_end + 4, len + 1);
+    client_data->response_received_len += len;
+    return _http_get_response_body(client, data, len, iotx_time_left(&timer), client_data);
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"#define duk_memmove(dst,src,len)  do { \",120,?,"	} while (0)
+#define duk_memcpy_unsafe(dst,src,len)  duk_memcpy((dst), (src), (len))
+#define duk_memmove(dst,src,len)  do { \
+		void *duk__dst = (dst); \
+		const void *duk__src = (src); \
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"#define duk_memmove_unsafe(dst,src,len)  duk_memmove((dst), (src), (len))",120,?,"		(void) DUK_MEMMOVE(duk__dst, duk__src, (size_t) duk__len); \
+	} while (0)
+#define duk_memmove_unsafe(dst,src,len)  duk_memmove((dst), (src), (len))
+#define duk_memset(dst,val,len)  do { \
+		void *duk__dst = (dst); \
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"duk_memmove((void *) (p + 1), (const void *) p, (size_t) nbytes);",120,?,"	 */
+	DUK_TVAL_SET_TVAL(&tv_tmp, q);
+	duk_memmove((void *) (p + 1), (const void *) p, (size_t) nbytes);
+	DUK_TVAL_SET_TVAL(p, &tv_tmp);
+}
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"duk_memmove((void *) p, (const void *) (p + 1), (size_t) nbytes);",120,?,"	 */
+	DUK_TVAL_SET_TVAL(&tv_tmp, p);
+	duk_memmove((void *) p, (const void *) (p + 1), (size_t) nbytes);
+	DUK_TVAL_SET_TVAL(q, &tv_tmp);
+}
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"duk_memmove((void *) tv_dst, (const void *) tv_src, bytes);",120,?,"	}
+
+	duk_memmove((void *) tv_dst, (const void *) tv_src, bytes);
+
+	tv_newtop = thr->valstack_top - count;
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"duk_memmove((void *) tv_dst, (const void *) tv_src, copy_bytes);",120,?,"	copy_bytes = (duk_size_t) ((duk_uint8_t *) thr->valstack_top - (duk_uint8_t *) tv_src);
+	thr->valstack_top = (duk_tval *) (void *) ((duk_uint8_t *) thr->valstack_top + gap_bytes);
+	duk_memmove((void *) tv_dst, (const void *) tv_src, copy_bytes);
+
+	/* Values in the gap are left as garbage: caller must fill them in
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"duk_memmove((void *) dst, (const void *) (dst + 1), 2 * len_safe);",120,?,"	if (shift_dst) {
+		q--;
+		duk_memmove((void *) dst, (const void *) (dst + 1), 2 * len_safe);
+		DUK_ASSERT(dst + 2 * len_safe == q);
+	}
+",
+2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\duktape\duktape.c,"duk_memmove((void *) buf, (const void *) p, (size_t) len);",120,?,"	len = (duk_size_t) ((buf + 32) - p);
+
+	duk_memmove((void *) buf, (const void *) p, (size_t) len);
+
+	return len;
+",
+2021\haas-mini-program\services\board_mgr\board_mgr.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\services\board_mgr\board_mgr.c,"memmove(new_driver, driver, index - driver + 1);",120,?,"        return (-1);
+    }
+    memmove(new_driver, driver, index - driver + 1);
+    memmove(new_driver + (index - driver + 1), DRIVER_NAME,
+            strlen(DRIVER_NAME));
+",
+2021\haas-mini-program\utils\mbedtls\library\cipher_wrap.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\utils\mbedtls\library\cipher_wrap.c,"memmove( output, input, length );",120,?,"{
+    ((void) ctx);
+    memmove( output, input, length );
+    return( 0 );
+}
+",
+2021\haas-mini-program\utils\mbedtls\library\ssl_tls.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\utils\mbedtls\library\ssl_tls.c,"memmove( ssl->out_msg + 12, ssl->out_msg + 4, len - 4 );",120,?,"        {
+            /* Make room for the additional DTLS fields */
+            memmove( ssl->out_msg + 12, ssl->out_msg + 4, len - 4 );
+            ssl->out_msglen += 8;
+            len += 8;
+",
+2021\haas-mini-program\utils\mbedtls\library\ssl_tls.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\utils\mbedtls\library\ssl_tls.c,"memmove( new_remain, cur_remain, remain_len );",120,?,"        }
+
+        memmove( new_remain, cur_remain, remain_len );
+    }
+
+",
+2021\Kiss-Light_Hub\src\mqttc\mqtt.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\mqttc\mqtt.c,"memmove(dest, src, n);",120,?,"          void* src  = (unsigned char*)client->recv_buffer.mem_start + consumed;
+          size_t n = client->recv_buffer.curr - client->recv_buffer.mem_start - consumed;
+          memmove(dest, src, n);
+          client->recv_buffer.curr -= consumed;
+          client->recv_buffer.curr_sz += consumed;
+",
+2021\Kiss-Light_Hub\src\mqttc\mqtt.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\mqttc\mqtt.c,"memmove(mq->mem_start, new_head->start, n);",120,?,"        size_t n = mq->curr - new_head->start;
+        size_t removing = new_head->start - (uint8_t*) mq->mem_start;
+        memmove(mq->mem_start, new_head->start, n);
+        mq->curr = (unsigned char*)mq->mem_start + n;
+
+",
+2021\Kiss-Light_Hub\src\mqttc\mqtt.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\mqttc\mqtt.c,"memmove(mqtt_mq_get(mq, new_tail_idx), mq->queue_tail, sizeof(struct mqtt_queued_message) * (new_tail_idx + 1));",120,?,"        {
+            ssize_t new_tail_idx = new_head - mq->queue_tail;
+            memmove(mqtt_mq_get(mq, new_tail_idx), mq->queue_tail, sizeof(struct mqtt_queued_message) * (new_tail_idx + 1));
+            mq->queue_tail = mqtt_mq_get(mq, new_tail_idx);
+
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"if( z[i]=='.' && ALWAYS(sz>i+4) ) memmove(&z[i+1], &z[sz-3], 4);",120,?,"    sz = sqlite3Strlen30(z);
+    for(i=sz-1; i>0 && z[i]!='/' && z[i]!='.'; i--){}
+    if( z[i]=='.' && ALWAYS(sz>i+4) ) memmove(&z[i+1], &z[sz-3], 4);
+  }
+}
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&data[iFree+sz+sz2], &data[iFree+sz], iFree2-(iFree+sz));",120,?,"          sz2 = get2byte(&data[iFree2+2]);
+          if( iFree2+sz2 > usableSize ) return SQLITE_CORRUPT_PAGE(pPage);
+          memmove(&data[iFree+sz+sz2], &data[iFree+sz], iFree2-(iFree+sz));
+          sz += sz2;
+        }else if( NEVER(iFree+sz>usableSize) ){
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&data[cbrk], &data[top], iFree-top);",120,?,"        cbrk = top+sz;
+        assert( cbrk+(iFree-top) <= usableSize );
+        memmove(&data[cbrk], &data[top], iFree-top);
+        for(pAddr=&data[cellOffset]; pAddr<pEnd; pAddr+=2){
+          pc = get2byte(pAddr);
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(pDest, ((u8*)pX->pData) + iOffset, iAmt);",120,?,"      ** corrupt but it does cause valgrind and ASAN warnings.  So use
+      ** memmove(). */
+      memmove(pDest, ((u8*)pX->pData) + iOffset, iAmt);
+    }
+  }
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(pMin, &pMin[1], sizeof(p->a[0])*(p->nSample-p->iMin-1));",120,?,"    tRowcnt *anDLt = pMin->anDLt;
+    sampleClear(p->db, pMin);
+    memmove(pMin, &pMin[1], sizeof(p->a[0])*(p->nSample-p->iMin-1));
+    pSample = &p->a[p->nSample-1];
+    pSample->nRowid = 0;
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(pAccum->zText, &pAccum->zText[n], pAccum->nChar);",120,?,"    }else{
+      pAccum->nChar -= n;
+      memmove(pAccum->zText, &pAccum->zText[n], pAccum->nChar);
+    }
+    if( pAccum->nChar==0 ) pAccum->mxAlloc = 0;
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&pWInfo->a[i], &pWInfo->a[i+1], nByte);",120,?,"      if( i!=pWInfo->nLevel-1 ){
+        int nByte = (pWInfo->nLevel-1-i) * sizeof(WhereLevel);
+        memmove(&pWInfo->a[i], &pWInfo->a[i+1], nByte);
+      }
+      pWInfo->nLevel--;
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&z[1], &z[i+1], (size_t)pStr->nUsed-1);",120,?,"  }
+  pStr->nUsed -= i;
+  memmove(&z[1], &z[i+1], (size_t)pStr->nUsed-1);
+}
+#else
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(pDst, pSrc, nByte);",120,?,"  u8 *pSrc = &pDst[pRtree->nBytesPerCell];
+  int nByte = (NCELL(pNode) - iCell - 1) * pRtree->nBytesPerCell;
+  memmove(pDst, pSrc, nByte);
+  writeInt16(&pNode->zData[2], NCELL(pNode)-1);
+  pNode->isDirty = 1;
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"if( z[i]=='.' && sz>i+4 ) memmove(&z[i+1], &z[sz-3], 4);",120,?,"    sz = (int)strlen(z)&0xffffff;
+    for(i=sz-1; i>0 && z[i]!='/' && z[i]!='.'; i--){}
+    if( z[i]=='.' && sz>i+4 ) memmove(&z[i+1], &z[sz-3], 4);
+  }
+#endif
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&p->zErrmsg[i], &p->zErrmsg[i+nDel], nErrmsg + 1 - i - nDel);",120,?,"        int nDel = 8;
+        while( p->zErrmsg[i+nDel]>='0' && p->zErrmsg[i+nDel]<='9' ) nDel++;
+        memmove(&p->zErrmsg[i], &p->zErrmsg[i+nDel], nErrmsg + 1 - i - nDel);
+        nErrmsg -= nDel;
+      }
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(pIn->buf.aBuf, &pIn->buf.aBuf[pIn->iNext], nMove);",120,?,"    assert( nMove>=0 );
+    if( nMove>0 ){
+      memmove(pIn->buf.aBuf, &pIn->buf.aBuf[pIn->iNext], nMove);
+    }
+    pIn->buf.nBuf -= pIn->iNext;
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&ap[p2->nPhrase], ap, p1->nPhrase*sizeof(Fts5ExprPhrase*));",120,?,"      }else{
+        int i;
+        memmove(&ap[p2->nPhrase], ap, p1->nPhrase*sizeof(Fts5ExprPhrase*));
+        for(i=0; i<p2->nPhrase; i++){
+          ap[i] = p2->apExprPhrase[i];
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(ap, &ap[1], sizeof(Fts5ExprPhrase*)*pRight->pNear->nPhrase);",120,?,"      ap = &pParse->apPhrase[pParse->nPhrase-1-pRight->pNear->nPhrase];
+      assert( ap[0]==pPrev->pNear->apPhrase[0] );
+      memmove(ap, &ap[1], sizeof(Fts5ExprPhrase*)*pRight->pNear->nPhrase);
+      pParse->nPhrase--;
+
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&pPtr[p->iSzPoslist + nByte], &pPtr[p->iSzPoslist + 1], nSz);",120,?,"      }else{
+        int nByte = sqlite3Fts5GetVarintLen((u32)nPos);
+        memmove(&pPtr[p->iSzPoslist + nByte], &pPtr[p->iSzPoslist + 1], nSz);
+        sqlite3Fts5PutVarint(&pPtr[p->iSzPoslist], nPos);
+        nData += (nByte-1);
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&aNew[nExtra], aNew, nMove);",120,?,"      }else{
+        int nMove = pLvl->nSeg * sizeof(Fts5StructureSegment);
+        memmove(&aNew[nExtra], aNew, nMove);
+        memset(aNew, 0, sizeof(Fts5StructureSegment) * nExtra);
+      }
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(pLvl->aSeg, &pLvl->aSeg[nInput], nMove);",120,?,"    if( pLvl->nSeg!=nInput ){
+      int nMove = (pLvl->nSeg - nInput) * sizeof(Fts5StructureSegment);
+      memmove(pLvl->aSeg, &pLvl->aSeg[nInput], nMove);
+    }
+    pStruct->nSegment -= nInput;
+",
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"memmove(&aNew[i+1], &aNew[i], (nNew-i)*sizeof(int));",120,?,"              if( (u32)aNew[i]>iCode ) break;
+            }
+            memmove(&aNew[i+1], &aNew[i], (nNew-i)*sizeof(int));
+            aNew[i] = iCode;
+            nNew++;
+",
+2021\Powergy-Medusa-FW-Basic-Auth\lib\pubsubclient\src\PubSubClient.cpp,Dataset Download,../../Dataset Download/2021\Powergy-Medusa-FW-Basic-Auth\lib\pubsubclient\src\PubSubClient.cpp,"memmove(this->buffer+llen+2,this->buffer+llen+3,tl); */",120,?,"                    if (callback) {
+                        uint16_t tl = (this->buffer[llen+1]<<8)+this->buffer[llen+2]; /* topic length in bytes */
+                        memmove(this->buffer+llen+2,this->buffer+llen+3,tl); /* move topic inside buffer 1 byte to front */
+                        this->buffer[llen+2+tl] = 0; /* end the topic as a 'C' string with \x00 */
+                        char *topic = (char*) this->buffer+llen+2;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\airkiss\airkiss_main.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\airkiss\airkiss_main.c,"os_memmove(&g_chans.chan[i+1], &g_chans.chan[i], move_cnt*sizeof(chan_param_t));",120,?,"            if(cur_chan != channel) {
+                u8 move_cnt = g_chans.selected_chan_nums - i;
+                os_memmove(&g_chans.chan[i+1], &g_chans.chan[i], move_cnt*sizeof(chan_param_t));
+                g_chans.selected_chan_nums += 1;
+            }
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\ftp\vfs.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\ftp\vfs.h,"#define bcopy(src, dest, len) memmove(dest, src, len)",120,?,"
+#define vfs_load_plugin(x)
+#define bcopy(src, dest, len) memmove(dest, src, len)
+
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,"os_memmove(data, &data[crlf_pos + 2], len - (crlf_pos + 2)); */",120,?,"            }
+
+            os_memmove(data, &data[crlf_pos + 2], len - (crlf_pos + 2)); /* Not need to move NULL-terminating char any more */
+            len -= (crlf_pos + 2);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,"os_memmove(b_data, &b_data[readLen], len - readLen); */",120,?,"            if (len > readLen) {
+                log_debug(""memmove %d %d %d\n"", readLen, len, client_data->retrieve_len);
+                os_memmove(b_data, &b_data[readLen], len - readLen); /* chunk case, read between two chunks */
+                len -= readLen;
+                readLen = 0;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,"os_memmove(data, &data[2], len - 2); */",120,?,"                return ERROR_HTTP_UNRESOLVED_DNS;
+            }
+            os_memmove(data, &data[2], len - 2); /* remove the \r\n */
+            len -= 2;
+        } else {
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,"os_memmove(data, &data[crlf_pos + 2], len - (crlf_pos + 2) + 1); */",120,?,"    log_debug(""Reading headers%s"", data);
+
+    os_memmove(data, &data[crlf_pos + 2], len - (crlf_pos + 2) + 1); /* Be sure to move NULL-terminating char as well */
+    len -= (crlf_pos + 2);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\http\utils_httpc.c,"os_memmove(data, &data[2], len - 2 + 1); */",120,?,"        if (crlf_pos == 0) {
+            /* End of headers */
+            os_memmove(data, &data[2], len - 2 + 1); /* Be sure to move NULL-terminating char as well */
+            len -= 2;
+            break;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\common\wpa_common.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\common\wpa_common.c,"os_memmove(rpos + 2, rpos, end - rpos);",120,?,"	if (rpos == rend) {
+		/* Add RSN Capabilities */
+		os_memmove(rpos + 2, rpos, end - rpos);
+		*rpos++ = 0;
+		*rpos++ = 0;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\common\wpa_common.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\common\wpa_common.c,"os_memmove(rpos + 2 + PMKID_LEN, rpos, end + added - rpos);",120,?,"	if (rpos == rend) {
+		/* No PMKID-Count field included; add it */
+		os_memmove(rpos + 2 + PMKID_LEN, rpos, end + added - rpos);
+		WPA_PUT_LE16(rpos, 1);
+		rpos += 2;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\common\wpa_common.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\common\wpa_common.c,"os_memmove(rpos + PMKID_LEN, rpos, end + added - rpos);",120,?,"		WPA_PUT_LE16(rpos, 1);
+		rpos += 2;
+		os_memmove(rpos + PMKID_LEN, rpos, end + added - rpos);
+		os_memcpy(rpos, pmkid, PMKID_LEN);
+		added += PMKID_LEN;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\multilink.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\multilink.c,"memmove(p, q, l);",120,?,"		q = p + strlen(entry);
+		l = strlen(q) + 1;
+		memmove(p, q, l);
+		rec.dsize = p - rec.dptr + l;
+		if (tdb_store(pppdb, key, rec, TDB_REPLACE))
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\music_player\Mp3Lib\mp3dec.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\music_player\Mp3Lib\mp3dec.c,"memmove(buf, *inbuf, mp3DecInfo->mainBuf_len);",120,?,"		uint8 *prt = (uint8 *)mp3DecInfo->HuffmanInfoPS;
+		
+		memmove(buf, *inbuf, mp3DecInfo->mainBuf_len);
+		mp3DecInfo->mainBuf_ptr = mp3DecInfo->mainBuf+BIT_RESVOR_SIZE; 
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\music_player\Mp3Lib\mp3dec.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\music_player\Mp3Lib\mp3dec.c,"memmove(buf, prt, readsize);",120,?,"		if(ret != FR_OK)
+			return ret;
+		memmove(buf, prt, readsize);
+
+		*bytesLeft += readsize;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\music_player\Mp3Lib\mp3dec.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\music_player\Mp3Lib\mp3dec.c,"memmove(p_des, p_src, len);",120,?,"					p_src = mp3DecInfo->bit_reservoir + BIT_RESVOR_SIZE - mp3DecInfo->mainDataBegin;
+					len = mp3DecInfo->mainDataBegin;
+					memmove(p_des, p_src, len);
+
+					p_des = mp3DecInfo->mainBuf+BIT_RESVOR_SIZE;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\rwnx_intf\rw_msdu.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\rwnx_intf\rw_msdu.c,"os_memmove((void *)((UINT32)orig_addr + CFG_MSDU_RESV_HEAD_LEN), buf, len);",120,?,"    gdma_memcpy((void *)((UINT32)orig_addr + CFG_MSDU_RESV_HEAD_LEN), buf, len);
+#else
+    os_memmove((void *)((UINT32)orig_addr + CFG_MSDU_RESV_HEAD_LEN), buf, len);
+#endif
+}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wolfssl\wolfssl\wolfcrypt\types.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wolfssl\wolfssl\wolfcrypt\types.h,"#define XMEMMOVE(d,s,l)   memmove((d),(s),(l))",120,?,"        #define XMEMSET(b,c,l)    memset((b),(c),(l))
+        #define XMEMCMP(s1,s2,n)  memcmp((s1),(s2),(n))
+        #define XMEMMOVE(d,s,l)   memmove((d),(s),(l))
+
+        #define XSTRLEN(s1)       strlen((s1))
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\mem_arch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\mem_arch.c,"void *os_memmove(void *out, const void *in, UINT32 n)",120,?,"}
+
+void *os_memmove(void *out, const void *in, UINT32 n)
+{
+    return memmove(out, in, n);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\mem_arch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\mem_arch.c,"return memmove(out, in, n);",120,?,"void *os_memmove(void *out, const void *in, UINT32 n)
+{
+    return memmove(out, in, n);
+}
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\include\mem_pub.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\include\mem_pub.h,"void *os_memmove(void *out, const void *in, UINT32 n);",120,?,"
+INT32 os_memcmp(const void *s1, const void *s2, UINT32 n);
+void *os_memmove(void *out, const void *in, UINT32 n);
+void *os_memcpy(void *out, const void *in, UINT32 n);
+void *os_memset(void *b, int c, UINT32 len);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\char_traits.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\char_traits.h,"{ return static_cast<char_type*>(__builtin_memmove(__s1, __s2, __n)); }",120,?,"      static char_type*
+      move(char_type* __s1, const char_type* __s2, size_t __n)
+      { return static_cast<char_type*>(__builtin_memmove(__s1, __s2, __n)); }
+
+      static char_type*
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\char_traits.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\char_traits.h,"{ return wmemmove(__s1, __s2, __n); }",120,?,"      static char_type*
+      move(char_type* __s1, const char_type* __s2, size_t __n)
+      { return wmemmove(__s1, __s2, __n); }
+
+      static char_type*
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\char_traits.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\char_traits.h,"(__builtin_memmove(__s1, __s2, __n * sizeof(char_type))));",120,?,"      {
+	return (static_cast<char_type*>
+		(__builtin_memmove(__s1, __s2, __n * sizeof(char_type))));
+      }
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\stl_algobase.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\stl_algobase.h,"__builtin_memmove(__result, __first, sizeof(_Tp) * _Num);",120,?,"	  const ptrdiff_t _Num = __last - __first;
+	  if (_Num)
+	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
+	  return __result + _Num;
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\stl_algobase.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\bits\stl_algobase.h,"__builtin_memmove(__result - _Num, __first, sizeof(_Tp) * _Num);",120,?,"	  const ptrdiff_t _Num = __last - __first;
+	  if (_Num)
+	    __builtin_memmove(__result - _Num, __first, sizeof(_Tp) * _Num);
+	  return __result - _Num;
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\ext\pod_char_traits.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\arm-none-eabi\include\c++\4.9.3\ext\pod_char_traits.h,"(__builtin_memmove(__s1, __s2, __n * sizeof(char_type)));",120,?,"      { 
+	return static_cast<char_type*>
+	  (__builtin_memmove(__s1, __s2, __n * sizeof(char_type)));
+      }
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\vec.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\vec.h,"memmove (slot + 1, slot, (m_vecpfx.m_num++ - ix) * sizeof (T));",120,?,"  gcc_checking_assert (ix <= length ());
+  T *slot = &m_vecdata[ix];
+  memmove (slot + 1, slot, (m_vecpfx.m_num++ - ix) * sizeof (T));
+  *slot = obj;
+}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\vec.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\vec.h,"memmove (slot, slot + 1, (--m_vecpfx.m_num - ix) * sizeof (T));",120,?,"  gcc_checking_assert (ix < length ());
+  T *slot = &m_vecdata[ix];
+  memmove (slot, slot + 1, (--m_vecpfx.m_num - ix) * sizeof (T));
+}
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\vec.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\vec.h,"memmove (slot, slot + len, (m_vecpfx.m_num - ix) * sizeof (T));",120,?,"  T *slot = &m_vecdata[ix];
+  m_vecpfx.m_num -= len;
+  memmove (slot, slot + len, (m_vecpfx.m_num - ix) * sizeof (T));
+}
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\sdk\include\lwip\opt.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\sdk\include\lwip\opt.h,"#define MEMMOVE(dst,src,len)            memmove(dst,src,len)",120,?," */
+#if !defined MEMMOVE || defined __DOXYGEN__
+#define MEMMOVE(dst,src,len)            memmove(dst,src,len)
+#endif
+/**
+",
+2021\x-cube-subg2\Drivers\CMSIS\NN\Source\PoolingFunctions\arm_pool_q7_HWC.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Drivers\CMSIS\NN\Source\PoolingFunctions\arm_pool_q7_HWC.c,"memmove(target, win_start, ch_im_in);",120,?,"            /* first step is to copy over initial data */
+            /* arm_copy_q7(win_start, target, ch_im_in); */
+            memmove(target, win_start, ch_im_in);
+
+            /* start the max operation from the second part */
+",
+2021\x-cube-subg2\Drivers\CMSIS\NN\Source\PoolingFunctions\arm_pool_q7_HWC.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Drivers\CMSIS\NN\Source\PoolingFunctions\arm_pool_q7_HWC.c,"memmove(target, row_start, dim_im_out * ch_im_in);",120,?,"        /* copy over the first row */
+        /* arm_copy_q7(row_start, target, dim_im_out * ch_im_in); */
+        memmove(target, row_start, dim_im_out * ch_im_in);
+
+        /* move over to next row */
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\app-layer\coap\coap.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\app-layer\coap\coap.c,"memmove((*dst) + (*dst_len), option, option_len);",120,?,"
+    /* memmove handles 2-byte option headers */
+    memmove((*dst) + (*dst_len), option, option_len);
+
+    *dst_len += option_len;
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\app-layer\coap\coap.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\app-layer\coap\coap.c,"memmove(option, coap_pkt->payload, coap_pkt->payload_len);",120,?,"      ++option;
+    }
+    memmove(option, coap_pkt->payload, coap_pkt->payload_len);
+  } else {
+    /* an error occurred: caller must check for !=0 */
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\sicslowpan.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\sicslowpan.c,"memmove(packetbuf_ptr + SICSLOWPAN_FRAG1_HDR_LEN, packetbuf_ptr, packetbuf_hdr_len);",120,?,"
+    /* Move IPHC/IPv6 header to make room for FRAG1 header */
+    memmove(packetbuf_ptr + SICSLOWPAN_FRAG1_HDR_LEN, packetbuf_ptr, packetbuf_hdr_len);
+    packetbuf_hdr_len += SICSLOWPAN_FRAG1_HDR_LEN;
+
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\tcp-socket.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\tcp-socket.c,"memmove(&s->output_data_ptr[s->output_data_len], data, len);",120,?,"  len = MIN(datalen, s->output_data_maxlen - s->output_data_len);
+
+  memmove(&s->output_data_ptr[s->output_data_len], data, len);
+  s->output_data_len += len;
+
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\uip-icmp6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\uip-icmp6.c,"memmove(uip_buf + shift, (void *)UIP_IP_BUF, uip_len - shift);",120,?,"  uip_len = MIN(uip_len, UIP_LINK_MTU);
+  uip_ext_len = 0;
+  memmove(uip_buf + shift, (void *)UIP_IP_BUF, uip_len - shift);
+
+  UIP_IP_BUF->vtc = 0x60;
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\uip-udp-packet.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\uip-udp-packet.c,"memmove(&uip_buf[UIP_IPUDPH_LEN], data, len);",120,?,"    uip_udp_conn = c;
+    uip_slen = len;
+    memmove(&uip_buf[UIP_IPUDPH_LEN], data, len);
+    uip_process(UIP_UDP_SEND_CONN);
+
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\uip6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\uip6.c,"memmove(UIP_IP_PAYLOAD(0), UIP_IP_PAYLOAD(uip_ext_len),",120,?,"    UIP_IP_BUF->proto = uip_last_proto;
+    /* Move IP payload to the ""left""*/
+    memmove(UIP_IP_PAYLOAD(0), UIP_IP_PAYLOAD(uip_ext_len),
+	    uip_len - UIP_IPH_LEN - uip_ext_len);
+
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\multicast\mpl.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\ipv6\multicast\mpl.c,"memmove(UIP_EXT_BUF_NEXT, UIP_EXT_BUF, uip_len - UIP_IPH_LEN);",120,?,"
+  /* Slide 'right' by HBHO_TOTAL_LEN bytes */
+  memmove(UIP_EXT_BUF_NEXT, UIP_EXT_BUF, uip_len - UIP_IPH_LEN);
+  memset(UIP_EXT_BUF, 0, HBHO_TOTAL_LEN);
+
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\routing\rpl-classic\rpl-ext-header.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\routing\rpl-classic\rpl-ext-header.c,"memmove(UIP_IP_PAYLOAD(RPL_HOP_BY_HOP_LEN), UIP_IP_PAYLOAD(0), uip_len - UIP_IPH_LEN);",120,?,"
+  /* Move existing ext headers and payload RPL_HOP_BY_HOP_LEN further */
+  memmove(UIP_IP_PAYLOAD(RPL_HOP_BY_HOP_LEN), UIP_IP_PAYLOAD(0), uip_len - UIP_IPH_LEN);
+  memset(UIP_IP_PAYLOAD(0), 0, RPL_HOP_BY_HOP_LEN);
+
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\dtls-crypto.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\dtls-crypto.c,"memmove(buf, src, length);",120,?,"
+  if (src != buf)
+    memmove(buf, src, length);
+  ret = dtls_ccm_encrypt(&ctx->data, src, length, buf, nounce, aad, la);
+
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\dtls-client.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\dtls-client.c,"memmove(buf, buf + res, len - res);",120,?,"  res = dtls_write(ctx, dst, (uint8_t *)buf, len);
+  if (res >= 0) {
+    memmove(buf, buf + res, len - res);
+    len -= res;
+  }
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\lwm2m\lwm2m-plain-text.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\lwm2m\lwm2m-plain-text.c,"memmove(outbuf, value, totlen);",120,?,"    return 0;
+  }
+  memmove(outbuf, value, totlen);
+  outbuf[totlen] = 0;
+  return totlen;
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\lvm.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\lvm.c,"memmove(ptr + sizeof(operator_t) + sizeof(node_type_t), ptr, old_end - end);",120,?,"  ptr = p->code + end;
+
+  memmove(ptr + sizeof(operator_t) + sizeof(node_type_t), ptr, old_end - end);
+  p->end = end;
+
+",

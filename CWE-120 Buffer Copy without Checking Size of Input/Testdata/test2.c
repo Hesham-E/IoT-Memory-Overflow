@@ -9,9 +9,10 @@ int main()
     printf("Please enter any random phrase");
     gets(buf);
 
-    char first3[3];
+    char first3[3] = {'a'};
     char first2[2];
 
+    printf("Length of first3 is %d", sizeof(first3)/sizeof(char));
     memmove(first3, buf, 3);
     memmove(first2, buf, 3);
 
