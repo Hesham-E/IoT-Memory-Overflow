@@ -1,0 +1,13 @@
+GithubID,Year,FullPath,Codesnippet,CWE,isTrueVulnerable,Codesnippet5
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"nChar = osMultiByteToWideChar(CP_UTF8, 0, zText, -1, NULL, 0);",120,1,"  LPWSTR zWideText;
+
+  nChar = osMultiByteToWideChar(CP_UTF8, 0, zText, -1, NULL, 0);
+  if( nChar==0 ){
+    return 0;
+"
+2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,Dataset Download,../../Dataset Download/2021\Kiss-Light_Hub\src\sqlite3\sqlite3.c,"nChar = MultiByteToWideChar(CP_UTF8, 0, zFilename, -1, NULL, 0);",120,1,"  LPWSTR zWideFilename;
+
+  nChar = MultiByteToWideChar(CP_UTF8, 0, zFilename, -1, NULL, 0);
+  if( nChar==0 ){
+    return 0;
+"

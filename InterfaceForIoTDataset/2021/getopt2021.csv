@@ -1,0 +1,115 @@
+GithubID,Year,FullPath,Codesnippet,CWE,isTrueVulnerable,Codesnippet5
+2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\samples\linux\shadow_sample\shadow_sample.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\samples\linux\shadow_sample\shadow_sample.c,"while(-1 != (opt = getopt(argc, argv, ""h:p:c:n:""))) {",120,1,"	int opt;
+
+	while(-1 != (opt = getopt(argc, argv, ""h:p:c:n:""))) {
+		switch(opt) {
+			case 'h':
+"
+2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\samples\linux\shadow_sample_console_echo\shadow_console_echo.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\samples\linux\shadow_sample_console_echo\shadow_console_echo.c,"while (-1 != (opt = getopt(argc, argv, ""h:p:c:""))) {",120,1,"	int opt;
+
+	while (-1 != (opt = getopt(argc, argv, ""h:p:c:""))) {
+		switch (opt) {
+		case 'h':
+"
+2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\samples\linux\subscribe_publish_library_sample\subscribe_publish_library_sample.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\samples\linux\subscribe_publish_library_sample\subscribe_publish_library_sample.c,"while(-1 != (opt = getopt(argc, argv, ""h:p:c:x:""))) {",120,1,"	int opt;
+
+	while(-1 != (opt = getopt(argc, argv, ""h:p:c:x:""))) {
+		switch(opt) {
+			case 'h':
+"
+2021\boxofhope\io_server\apps\app.cpp,Dataset Download,../../Dataset Download/2021\boxofhope\io_server\apps\app.cpp,"c = getopt_long(argc, argv, ""htrP:A:U:"", long_options, &option_index);",120,1,"        // Parse options. Note the flags are the same as bash getopts (probably
+        // not a coincidence)
+        c = getopt_long(argc, argv, ""htrP:A:U:"", long_options, &option_index);
+
+        // Detect the end of the options
+"
+2021\c-vertices-sdk\examples\unix\main.c,Dataset Download,../../Dataset Download/2021\c-vertices-sdk\examples\unix\main.c,"while ((opt = getopt(argc, argv, ""n"")) != -1)",120,1,"    bool create_new = false;
+    int opt;
+    while ((opt = getopt(argc, argv, ""n"")) != -1)
+    {
+        switch (opt)
+"
+2021\cslim\test\libglusterfs\call-stub.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\call-stub.cpp.c,"extern int getopt (int ___argc, char *const *___argv, const char *__shortopts)",120,1,"extern int optopt;
+# 150 ""/usr/include/getopt.h"" 3 4
+extern int getopt (int ___argc, char *const *___argv, const char *__shortopts)
+       __attribute__ ((__nothrow__ , __leaf__));
+# 875 ""/usr/include/unistd.h"" 2 3 4
+"
+2021\deneyapkart-arduino-core\tools\sdk\include\newlib\sys\unistd.h,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\tools\sdk\include\newlib\sys\unistd.h,"int	 getopt(int, char * const [], const char *);",120,1,"extern char *optarg;			/* getopt(3) external variables */
+extern int optind, opterr, optopt;
+int	 getopt(int, char * const [], const char *);
+extern int optreset;			/* getopt(3) external variable */
+#endif
+"
+2021\deneyapkart-arduino-core\tools\sdk\include\wpa_supplicant\crypto\common.h,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\tools\sdk\include\wpa_supplicant\crypto\common.h,"int getopt(int argc, char *const argv[], const char *optstring);",120,1,"
+/* getopt - only used in main.c */
+int getopt(int argc, char *const argv[], const char *optstring);
+extern char *optarg;
+extern int optind;
+"
+2021\pear\examples\gstreamer\main.c,Dataset Download,../../Dataset Download/2021\pear\examples\gstreamer\main.c,"while((opt = getopt(argc, argv, ""p:H:r:h"")) != -1) {",120,1,"  int opt;
+
+  while((opt = getopt(argc, argv, ""p:H:r:h"")) != -1) {
+    switch(opt) {
+      case 'p':
+"
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\utils\common.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\src\utils\common.c,"int getopt(int argc, char *const argv[], const char *optstring)",120,1,"char *optarg;
+
+int getopt(int argc, char *const argv[], const char *optstring)
+{
+	static int optchr = 1;
+"
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wolfssl\wolfssl\test.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wolfssl\wolfssl\test.h,"static WC_INLINE int mygetopt(int argc, char** argv, const char* optstring)",120,1,"extern char* myoptarg;
+
+static WC_INLINE int mygetopt(int argc, char** argv, const char* optstring)
+{
+    static char* next = NULL;
+"
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\system.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\system.h,"extern int getopt (int, char * const *, const char *);",120,1,"
+#if defined (HAVE_DECL_GETOPT) && !HAVE_DECL_GETOPT
+extern int getopt (int, char * const *, const char *);
+#endif
+
+"
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\dtls-client.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\dtls-client.c,"while ((opt = getopt(argc, argv, ""p:o:"" PSK_OPTIONS)) != -1) {",120,1,"#endif /* DTLS_PSK */
+
+  while ((opt = getopt(argc, argv, ""p:o:"" PSK_OPTIONS)) != -1) {
+    switch (opt) {
+#ifdef DTLS_PSK
+"
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\dtls-server.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\dtls-server.c,"while ((opt = getopt(argc, argv, ""A:p:"")) != -1) {",120,1,"  listen_addr.sin6_addr = in6addr_any;
+
+  while ((opt = getopt(argc, argv, ""A:p:"")) != -1) {
+    switch (opt) {
+    case 'A' :
+"
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\pcap.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\net\security\tinydtls\tests\pcap.c,"c = getopt_long(argc, argv, ""p:"", opts, &option_index);",120,1,"  /* handle command line options */
+  while (1) {
+    c = getopt_long(argc, argv, ""p:"", opts, &option_index);
+    if (c == -1)
+      break;
+"
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\slip-config.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\slip-config.c,"while((c = getopt(argc, argv, ""B:H:D:Lhs:t:v::d::a:p:T"")) != -1) {",120,1,"
+  prog = argv[0];
+  while((c = getopt(argc, argv, ""B:H:D:Lhs:t:v::d::a:p:T"")) != -1) {
+    switch(c) {
+    case 'B':
+"
+2021\x-cube-subg2\Utilities\PC_Software\Contiki-NG\serial-io\tunslip6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Utilities\PC_Software\Contiki-NG\serial-io\tunslip6.c,"while((c = getopt(argc, argv, ""B:HILPhXM:s:t:v::d::a:p:T"")) != -1) {",120,1,"  setvbuf(stdout, NULL, _IOLBF, 0); /* Line buffered output. */
+
+  while((c = getopt(argc, argv, ""B:HILPhXM:s:t:v::d::a:p:T"")) != -1) {
+    switch(c) {
+    case 'B':
+"
+2021\x-cube-subg2\Utilities\PC_Software\wpcapslip6\wpcapslip6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Utilities\PC_Software\wpcapslip6\wpcapslip6.c,"while((c = getopt(argc, argv, ""B:D:L:hs:c:ra:p:vtb:"")) != -1) {",120,1,"	GetVersionEx(&osVersionInfo);
+
+    while((c = getopt(argc, argv, ""B:D:L:hs:c:ra:p:vtb:"")) != -1) {
+		switch (c) {
+	case 'B':
+"
+2021\zhbox\src\main.c,Dataset Download,../../Dataset Download/2021\zhbox\src\main.c,"while ((opt = getopt_long(argc, argv, ""hSsc:i:fV"", long_opts, NULL)) != -1) {",120,1,"    };
+
+    while ((opt = getopt_long(argc, argv, ""hSsc:i:fV"", long_opts, NULL)) != -1) {
+        switch (opt) {
+            case 'S': need_stop = 1; break;
+"
