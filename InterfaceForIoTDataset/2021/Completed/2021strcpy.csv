@@ -1,0 +1,1579 @@
+GithubID,Year,FullPath,Codesnippet,CWE,isTrueVulnerable,Codesnippet5,
+2021\a9_gsm_gps_library\a9_spi_lib\src\spi_example.c,Dataset Download,../../Dataset Download/2021\a9_gsm_gps_library\a9_spi_lib\src\spi_example.c,"strcpy(send_buff, ""123456789"");",120,0,"	memset(rev_buff, 0, sizeof(rev_buff));
+
+	strcpy(send_buff, ""123456789"");
+
+	while(1)
+",
+2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\deprecated.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\deprecated.cpp,"strcpy(original, ""world"");",120,?,"    char original[] = ""hello"";
+    const char* copy = buffer.strdup(original);
+    strcpy(original, ""world"");
+    REQUIRE(std::string(""hello"") == copy);
+  }
+",
+2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,"strcpy(vla, ""[42]"");",120,0,"    int i = 8;
+    char vla[i];
+    strcpy(vla, ""[42]"");
+
+    StaticJsonBuffer<JSON_ARRAY_SIZE(1)> jsonBuffer;
+",
+2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,"strcpy(vla, ""{\""a\"":42}"");",120,0,"    int i = 16;
+    char vla[i];
+    strcpy(vla, ""{\""a\"":42}"");
+
+    StaticJsonBuffer<JSON_OBJECT_SIZE(1)> jsonBuffer;
+",
+2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,"strcpy(vla, ""42"");",120,0,"    int i = 16;
+    char vla[i];
+    strcpy(vla, ""42"");
+
+    StaticJsonBuffer<1> jsonBuffer;
+",
+2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,"strcpy(vla, ""hello"");",120,0,"    int i = 16;
+    char vla[i];
+    strcpy(vla, ""hello"");
+
+    DynamicJsonBuffer jsonBuffer;
+",
+2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\ArduinoJson\test\Misc\vla.cpp,"strcpy(vla, ""world"");",120,0,"    int i = 32;
+    char vla[i];
+    strcpy(vla, ""world"");
+
+    DynamicJsonBuffer jsonBuffer;
+",
+2021\arduino-learn-circuit\libraries\pubsubclient-master\tests\src\receive_spec.cpp,Dataset Download,../../Dataset Download/2021\arduino-learn-circuit\libraries\pubsubclient-master\tests\src\receive_spec.cpp,"strcpy(lastTopic,topic);",120,1,"void callback(char* topic, byte* payload, unsigned int length) {
+    callback_called = true;
+    strcpy(lastTopic,topic);
+    memcpy(lastPayload,payload,length);
+    lastLength = length;
+",topic may be larger than lastopic
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_draw\lv_img_decoder.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_draw\lv_img_decoder.c,"strcpy((char *)dsc->src, src);",120,0,"        size_t fnlen = strlen(src);
+        dsc->src = lv_mem_alloc(fnlen + 1);
+        strcpy((char *)dsc->src, src);
+    }
+    else {
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_calendar.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_calendar.c,"strcpy(&txt_buf[5], get_month_name(calendar, ext->showed_date.month));",120,0,"    txt_buf[4] = ' ';
+    txt_buf[5] = '\0';
+    strcpy(&txt_buf[5], get_month_name(calendar, ext->showed_date.month));
+
+    calendar->state = LV_STATE_DEFAULT;
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_dropdown.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_dropdown.c,"strcpy(ext->options, options);",120,0,"
+#if LV_USE_ARABIC_PERSIAN_CHARS == 0
+    strcpy(ext->options, options);
+#else
+    _lv_txt_ap_proc(options, ext->options);
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_dropdown.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_dropdown.c,"strcpy(ext->options, static_options);",120,0,"        if(ext->options == NULL) return;
+
+        strcpy(ext->options, static_options);
+        ext->static_txt = 0;
+    }
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_dropdown.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_dropdown.c,"strcpy(ins_buf, option);",120,0,"    LV_ASSERT_MEM(ins_buf);
+    if(ins_buf == NULL) return;
+    strcpy(ins_buf, option);
+    if(pos < ext->option_cnt)
+        strcat(ins_buf, ""\n"");
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_img.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_img.c,"strcpy(new_str, src_img);",120,0,"            LV_ASSERT_MEM(new_str);
+            if(new_str == NULL) return;
+            strcpy(new_str, src_img);
+            ext->src = new_str;
+
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_label.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_label.c,"strcpy(ext->text, text);",120,0,"        LV_ASSERT_MEM(ext->text);
+        if(ext->text == NULL) return;
+        strcpy(ext->text, text);
+#endif
+
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_roller.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_roller.c,"strcpy(&opt_extra[opt_len * i], options);",120,0,"        uint8_t i;
+        for(i = 0; i < LV_ROLLER_INF_PAGES; i++) {
+            strcpy(&opt_extra[opt_len * i], options);
+            opt_extra[opt_len * (i + 1) - 1] = '\n';
+        }
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_table.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_table.c,"strcpy(ext->cell_data[cell] + 1, txt);  */",120,0,"    if(ext->cell_data[cell] == NULL) return;
+
+    strcpy(ext->cell_data[cell] + 1, txt);  /*+1 to skip the format byte*/
+#endif
+
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_tabview.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_tabview.c,"strcpy(name_dm, name);",120,0,"    LV_ASSERT_MEM(name_dm);
+    if(name_dm == NULL) return NULL;
+    strcpy(name_dm, name);
+
+    ext->tab_cnt++;
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_tabview.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_tabview.c,"strcpy(str, name);",120,0,"
+        /* store new tab name at allocated memory */
+        strcpy(str, name);
+        /* update pointer  */
+        ext->tab_name_ptr[id] = str;
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_textarea.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_textarea.c,"strcpy(ext->pwd_tmp, txt);",120,0,"        LV_ASSERT_MEM(ext->pwd_tmp);
+        if(ext->pwd_tmp == NULL) return;
+        strcpy(ext->pwd_tmp, txt);
+
+#if LV_USE_ANIMATION
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_textarea.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_textarea.c,"strcpy(ext->placeholder_txt, txt);",120,0,"            return;
+        }
+        strcpy(ext->placeholder_txt, txt);
+    }
+
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_win.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_win.c,"strcpy(ext->title_txt, DEF_TITLE);",120,0,"    ext->header        = NULL;
+    ext->title_txt    = lv_mem_alloc(strlen(DEF_TITLE) + 1);
+    strcpy(ext->title_txt, DEF_TITLE);
+
+    /*Init the new window object*/
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_win.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_win.c,"strcpy(ext->title_txt, copy_ext->title_txt);",120,0,"        ext->header   = lv_obj_create(new_win, copy_ext->header);
+        ext->title_txt    = lv_mem_alloc(strlen(copy_ext->title_txt) + 1);
+        strcpy(ext->title_txt, copy_ext->title_txt);
+        ext->page     = lv_page_create(new_win, copy_ext->page);
+        ext->btn_w     = copy_ext->btn_w;
+",
+2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_win.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\core2forAWS\tft\lvgl\lvgl\src\lv_widgets\lv_win.c,"strcpy(ext->title_txt, title);",120,0,"    if(ext->title_txt == NULL) return;
+
+    strcpy(ext->title_txt, title);
+    lv_obj_invalidate(ext->header);
+}
+",
+2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,"strcpy(actionBuf, ""get"");",120,0,"
+	if(SHADOW_GET == action) {
+		strcpy(actionBuf, ""get"");
+	} else if(SHADOW_UPDATE == action) {
+		strcpy(actionBuf, ""update"");
+",
+2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,"strcpy(actionBuf, ""update"");",120,0,"		strcpy(actionBuf, ""get"");
+	} else if(SHADOW_UPDATE == action) {
+		strcpy(actionBuf, ""update"");
+	} else if(SHADOW_DELETE == action) {
+		strcpy(actionBuf, ""delete"");
+",
+2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,"strcpy(actionBuf, ""delete"");",120,0,"		strcpy(actionBuf, ""update"");
+	} else if(SHADOW_DELETE == action) {
+		strcpy(actionBuf, ""delete"");
+	}
+
+",
+2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-aws-iot\aws-iot-device-sdk-embedded-C\tests\unit\src\aws_iot_tests_unit_shadow_action_helper.c,"strcpy(jsonFullDocument, pReceivedJsonDocument);",120,1,"	ackStatusRx = status;
+	if(SHADOW_ACK_TIMEOUT != status) {
+		strcpy(jsonFullDocument, pReceivedJsonDocument);
+	}
+}
+",pReceivedJsonDocument may be larger
+2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\basic\atca_basic.c,Dataset Download,../../Dataset Download/2021\aws-edukit-example\components\esp-cryptoauthlib\cryptoauthlib\lib\basic\atca_basic.c,"strcpy(ver_str, atca_version);",120,1,"ATCA_STATUS atcab_version(char *ver_str)
+{
+    strcpy(ver_str, atca_version);
+    return ATCA_SUCCESS;
+}
+",ver_str may be uninitialized
+2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\platform\inc\vl53l0x_platform_log.h,Dataset Download,../../Dataset Download/2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\platform\inc\vl53l0x_platform_log.h,"#define VL53L0_COPYSTRING(str, ...) strcpy(str, ##__VA_ARGS__)",120,1,"#endif /* else */
+
+#define VL53L0_COPYSTRING(str, ...) strcpy(str, ##__VA_ARGS__)
+#ifdef __cplusplus
+}
+",
+2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\platform\inc\vl53l0x_tof.h,Dataset Download,../../Dataset Download/2021\B-L4S5I-IOT01A-using-VL530X-via-I2C\Core\platform\inc\vl53l0x_tof.h,"#define VL53L0X_COPYSTRING(str, ...) strcpy(str, ##__VA_ARGS__)",120,1,"#define PALDevDataSet(Dev, field, data) (Dev->Data.field)=(data)
+
+#define VL53L0X_COPYSTRING(str, ...) strcpy(str, ##__VA_ARGS__)
+/* Private macros ------------------------------------------------------------*/
+/* Exported functions --------------------------------------------------------*/
+",
+2021\c-vertices-sdk\src\algorand\algorand_provider.c,Dataset Download,../../Dataset Download/2021\c-vertices-sdk\src\algorand\algorand_provider.c,"strcpy((char *) tx_id, tx_id_json->valuestring);",120,0,"                else
+                {
+                    strcpy((char *) tx_id, tx_id_json->valuestring);
+                }
+            }
+",
+2021\c-vertices-sdk\src\algorand\algorand_provider.c,Dataset Download,../../Dataset Download/2021\c-vertices-sdk\src\algorand\algorand_provider.c,"strcpy(m_provider.version.network, genesis_id->valuestring);",120,0,"                else
+                {
+                    strcpy(m_provider.version.network, genesis_id->valuestring);
+                }
+            }
+",
+2021\c-vertices-sdk\src\algorand\algorand_provider.c,Dataset Download,../../Dataset Download/2021\c-vertices-sdk\src\algorand\algorand_provider.c,"strcpy(version->network, m_provider.version.network);",120,1,"    // local copy of version has been updated (or not)
+    // copy version into caller structure
+    strcpy(version->network, m_provider.version.network);
+    memcpy(version->genesis_hash, m_provider.version.genesis_hash, sizeof(version->genesis_hash));
+
+",Checks occur within if statements
+2021\cslim\test\libglusterfs\call-stub.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\call-stub.cpp.c,"extern char *strcpy (char *__restrict __dest, const char *__restrict __src)",120,?,"
+
+extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+",
+2021\cslim\test\libglusterfs\common-utils.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\common-utils.cpp.c,"strcpy (absolute_path, current_path);",120,0,"
+        if (strcmp (current_path, ""/"") != 0) {
+                strcpy (absolute_path, current_path);
+
+
+",
+2021\cslim\test\libglusterfs\compat.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\compat.c,"strcpy (pair->key, key);",120,0,"                        return -1;
+                }
+                strcpy (pair->key, key);
+        }
+        pair->value = data_ref (value);
+",
+2021\cslim\test\libglusterfs\compat.h,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\compat.h,"extern char *strcpy (char *__restrict __dest, const char *__restrict __src);",120,?,"gf_asprintf (char **string_ptr, const char *format, ...);
+data_ref (data_t *this);
+extern char *strcpy (char *__restrict __dest, const char *__restrict __src);
+__is_member (struct mem_pool *pool, void *ptr);
+list_add (struct list_head *new, struct list_head *head);
+",
+2021\cslim\test\libglusterfs\gf-dirent.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\gf-dirent.cpp.c,"strcpy (gf_dirent->d_name, name);",120,0,"
+        do { (&gf_dirent->list)->next = (&gf_dirent->list)->prev = &gf_dirent->list; } while (0);
+        strcpy (gf_dirent->d_name, name);
+
+        gf_dirent->d_off = 0;
+",
+2021\cslim\test\libglusterfs\inode.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\inode.cpp.c,"strcpy (buf, ""/"");",120,0,"                buf = __gf_calloc (ret + 1, sizeof (char), gf_common_mt_char, ""gf_common_mt_char"");
+                if (buf) {
+                        strcpy (buf, ""/"");
+                        *bufp = buf;
+                } else {
+",
+2021\cslim\test\libglusterfs\logging.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\logging.cpp.c,"strcpy (msg, str1);",120,0,"        }
+
+        strcpy (msg, str1);
+        strcpy (msg + len, str2);
+
+",
+2021\cslim\test\libglusterfs\logging.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\logging.cpp.c,"strcpy (msg + len, str2);",120,0,"
+        strcpy (msg, str1);
+        strcpy (msg + len, str2);
+
+        pthread_mutex_lock (&ctx->log.logfile_mutex);
+",
+2021\cslim\test\libglusterfs\logging.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\logging.cpp.c,"strcpy (msg, header);",120,0,"        }
+
+        strcpy (msg, header);
+        strcpy (msg + hlen, *appmsgstr);
+        if (footer)
+",
+2021\cslim\test\libglusterfs\logging.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\logging.cpp.c,"strcpy (msg + hlen, *appmsgstr);",120,0,"
+        strcpy (msg, header);
+        strcpy (msg + hlen, *appmsgstr);
+        if (footer)
+                strcpy (msg + hlen + mlen, footer);
+",
+2021\cslim\test\libglusterfs\logging.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\logging.cpp.c,"strcpy (msg + hlen + mlen, footer);",120,0,"        strcpy (msg + hlen, *appmsgstr);
+        if (footer)
+                strcpy (msg + hlen + mlen, footer);
+
+        pthread_mutex_lock (&ctx->log.logfile_mutex);
+",
+2021\cslim\test\libglusterfs\syscall.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\syscall.cpp.c,"strcpy(*newkey, ns);",120,0,"                *newkey = __gf_malloc (ns_length + strlen(key) + 10, gf_common_mt_char, ""gf_common_mt_char"")
+                                                      ;
+                strcpy(*newkey, ns);
+                strcat(*newkey, key);
+        } else {
+",
+2021\cslim\test\libglusterfs\syscall.cpp.c,Dataset Download,../../Dataset Download/2021\cslim\test\libglusterfs\syscall.cpp.c,"strcpy(*newkey, key + ns_length);",120,0,"                *newkey = __gf_malloc (-ns_length + strlen(key) + 10, gf_common_mt_char, ""gf_common_mt_char"")
+                                                      ;
+                strcpy(*newkey, key + ns_length);
+        } else {
+                *newkey = gf_strdup(key);
+",
+2021\deneyapkart-arduino-core\cores\esp32\stdlib_noniso.c,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\stdlib_noniso.c,"strcpy(s, ""nan"");",120,1,"
+    if (isnan(number)) {
+        strcpy(s, ""nan"");
+        return s;
+    }
+",
+2021\deneyapkart-arduino-core\cores\esp32\stdlib_noniso.c,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\cores\esp32\stdlib_noniso.c,"strcpy(s, ""inf"");",120,1,"    }
+    if (isinf(number)) {
+        strcpy(s, ""inf"");
+        return s;
+    }
+",
+2021\deneyapkart-arduino-core\libraries\00_LIBS\src\Adafruit_MQTT_Client.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\libraries\00_LIBS\src\Adafruit_MQTT_Client.cpp,"strcpy((char *)buffer, servername);",120,?,"  // Grab server name from flash and copy to buffer for name resolution.
+  memset(buffer, 0, sizeof(buffer));
+  strcpy((char *)buffer, servername);
+  DEBUG_PRINT(F(""Connecting to: ""));
+  DEBUG_PRINTLN((char *)buffer);
+",
+2021\deneyapkart-arduino-core\libraries\07_BLE\src\GeneralUtils.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\libraries\07_BLE\src\GeneralUtils.cpp,"strcpy(ascii, """");",120,0,"	log_v(""     00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f"");
+	log_v(""     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --"");
+	strcpy(ascii, """");
+	strcpy(hex, """");
+	uint32_t index = 0;
+",
+2021\deneyapkart-arduino-core\libraries\07_BLE\src\GeneralUtils.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\libraries\07_BLE\src\GeneralUtils.cpp,"strcpy(hex, """");",120,0,"	log_v(""     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --"");
+	strcpy(ascii, """");
+	strcpy(hex, """");
+	uint32_t index = 0;
+	while (index < length) {
+",
+2021\deneyapkart-arduino-core\libraries\08_WiFi\src\WiFiSTA.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\libraries\08_WiFi\src\WiFiSTA.cpp,"strcpy(reinterpret_cast<char*>(conf.sta.ssid), ssid);",120,1,"    wifi_config_t conf;
+    memset(&conf, 0, sizeof(wifi_config_t));
+    strcpy(reinterpret_cast<char*>(conf.sta.ssid), ssid);
+
+    if(passphrase) {
+",
+2021\deneyapkart-arduino-core\libraries\08_WiFi\src\WiFiSTA.cpp,Dataset Download,../../Dataset Download/2021\deneyapkart-arduino-core\libraries\08_WiFi\src\WiFiSTA.cpp,"strcpy(reinterpret_cast<char*>(conf.sta.password), passphrase);",120,1,"            memcpy(reinterpret_cast<char*>(conf.sta.password), passphrase, 64);
+        } else {
+            strcpy(reinterpret_cast<char*>(conf.sta.password), passphrase);
+        }
+    }
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"int util_strcpy(char *dst, char *src) {",120,?,"}
+
+int util_strcpy(char *dst, char *src) {
+    int l = util_strlen(src);
+
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(string, &scratch[offset]);",120,?,"            offset++;
+
+        util_strcpy(string, &scratch[offset]);
+    }
+    else
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"else strcpy(buf, url);",120,1,"    }
+    if (!strncmp(url, ""http://"", 7)) strcpy(buf, url + 7);
+    else strcpy(buf, url);
+    for (i = 0; i < strlen(buf) && buf[i] != '/'; i++);
+    buf[i] = 0;
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_path += util_strcpy(ptr_path, ""/proc/"");",120,?,"
+    // Copy /proc/$pid/exe into path
+    ptr_path += util_strcpy(ptr_path, ""/proc/"");
+    ptr_path += util_strcpy(ptr_path, util_itoa(getpid(), 10, tmp));
+    ptr_path += util_strcpy(ptr_path, ""/exe"");
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_path += util_strcpy(ptr_path, util_itoa(getpid(), 10, tmp));",120,?,"    // Copy /proc/$pid/exe into path
+    ptr_path += util_strcpy(ptr_path, ""/proc/"");
+    ptr_path += util_strcpy(ptr_path, util_itoa(getpid(), 10, tmp));
+    ptr_path += util_strcpy(ptr_path, ""/exe"");
+
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_path += util_strcpy(ptr_path, ""/exe"");",120,?,"    ptr_path += util_strcpy(ptr_path, ""/proc/"");
+    ptr_path += util_strcpy(ptr_path, util_itoa(getpid(), 10, tmp));
+    ptr_path += util_strcpy(ptr_path, ""/exe"");
+
+    // Try to open file
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_exe_path += util_strcpy(ptr_exe_path, ""/proc/"");",120,?,"
+            // Store /proc/$pid/exe into exe_path
+            ptr_exe_path += util_strcpy(ptr_exe_path, ""/proc/"");
+            ptr_exe_path += util_strcpy(ptr_exe_path, file->d_name);
+            ptr_exe_path += util_strcpy(ptr_exe_path, ""/exe"");
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_exe_path += util_strcpy(ptr_exe_path, file->d_name);",120,?,"            // Store /proc/$pid/exe into exe_path
+            ptr_exe_path += util_strcpy(ptr_exe_path, ""/proc/"");
+            ptr_exe_path += util_strcpy(ptr_exe_path, file->d_name);
+            ptr_exe_path += util_strcpy(ptr_exe_path, ""/exe"");
+
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_exe_path += util_strcpy(ptr_exe_path, ""/exe"");",120,?,"            ptr_exe_path += util_strcpy(ptr_exe_path, ""/proc/"");
+            ptr_exe_path += util_strcpy(ptr_exe_path, file->d_name);
+            ptr_exe_path += util_strcpy(ptr_exe_path, ""/exe"");
+
+            // Store /proc/$pid/status into status_path
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_status_path += util_strcpy(ptr_status_path, ""/proc/"");",120,?,"
+            // Store /proc/$pid/status into status_path
+            ptr_status_path += util_strcpy(ptr_status_path, ""/proc/"");
+            ptr_status_path += util_strcpy(ptr_status_path, file->d_name);
+            ptr_status_path += util_strcpy(ptr_status_path, ""/status"");
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_status_path += util_strcpy(ptr_status_path, file->d_name);",120,?,"            // Store /proc/$pid/status into status_path
+            ptr_status_path += util_strcpy(ptr_status_path, ""/proc/"");
+            ptr_status_path += util_strcpy(ptr_status_path, file->d_name);
+            ptr_status_path += util_strcpy(ptr_status_path, ""/status"");
+
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"ptr_status_path += util_strcpy(ptr_status_path, ""/status"");",120,?,"            ptr_status_path += util_strcpy(ptr_status_path, ""/proc/"");
+            ptr_status_path += util_strcpy(ptr_status_path, file->d_name);
+            ptr_status_path += util_strcpy(ptr_status_path, ""/status"");
+
+            // Resolve exe_path (/proc/$pid/exe) -> realpath
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(inode, &(buffer[ii]));",120,?,"                continue;
+
+            util_strcpy(inode, &(buffer[ii]));
+            break;
+        }
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(ptr_path, ""/proc/"");",120,?,"                continue;
+
+            util_strcpy(ptr_path, ""/proc/"");
+            util_strcpy(ptr_path + util_strlen(ptr_path), pid);
+            util_strcpy(ptr_path + util_strlen(ptr_path), ""/exe"");
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(ptr_path + util_strlen(ptr_path), pid);",120,?,"
+            util_strcpy(ptr_path, ""/proc/"");
+            util_strcpy(ptr_path + util_strlen(ptr_path), pid);
+            util_strcpy(ptr_path + util_strlen(ptr_path), ""/exe"");
+
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(ptr_path + util_strlen(ptr_path), ""/exe"");",120,?,"            util_strcpy(ptr_path, ""/proc/"");
+            util_strcpy(ptr_path + util_strlen(ptr_path), pid);
+            util_strcpy(ptr_path + util_strlen(ptr_path), ""/exe"");
+
+            if (readlink(path, exe, PATH_MAX) == -1)
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(ptr_path + util_strlen(ptr_path), ""/fd"");",120,?,"            util_strcpy(ptr_path, ""/proc/"");
+            util_strcpy(ptr_path + util_strlen(ptr_path), pid);
+            util_strcpy(ptr_path + util_strlen(ptr_path), ""/fd"");
+            if ((fd_dir = opendir(path)) != NULL)
+            {
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(ptr_path + util_strlen(ptr_path), ""/"");",120,?,"                    util_strcpy(ptr_path + util_strlen(ptr_path), pid);
+                    util_strcpy(ptr_path + util_strlen(ptr_path), ""/fd"");
+                    util_strcpy(ptr_path + util_strlen(ptr_path), ""/"");
+                    util_strcpy(ptr_path + util_strlen(ptr_path), fd_str);
+                    if (readlink(path, exe, PATH_MAX) == -1)
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"util_strcpy(ptr_path + util_strlen(ptr_path), fd_str);",120,?,"                    util_strcpy(ptr_path + util_strlen(ptr_path), ""/fd"");
+                    util_strcpy(ptr_path + util_strlen(ptr_path), ""/"");
+                    util_strcpy(ptr_path + util_strlen(ptr_path), fd_str);
+                    if (readlink(path, exe, PATH_MAX) == -1)
+                        continue;
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"if(argc == 2) { memset(ldserver, 0, sizeof(ldserver)); strcpy(ldserver, argv[1]); }",120,1,"void processCmd(int argc, unsigned char * argv[]) {
+  if(strstr(argv[0], decode(""~-6mvgmv""))) { //LDSERVER - gets loader server for everything
+      if(argc == 2) { memset(ldserver, 0, sizeof(ldserver)); strcpy(ldserver, argv[1]); }
+    // printf(""SUCCESSFULLY LOADED LOADER SERVER %s\n"", ldserver);
+  }
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"strcpy(addr.sun_path, name);",120,1,"    /* fill in socket address structure */
+    addr.sun_family = AF_UNIX;
+    strcpy(addr.sun_path, name);
+    len = offsetof(struct sockaddr_un, sun_path) + strlen(name);
+
+",
+2021\enemy\enemy.c,Dataset Download,../../Dataset Download/2021\enemy\enemy.c,"strcpy(params[paramsCount], pch);",120,0,"                                    params[paramsCount] = (unsigned char *)malloc(strlen(pch) + 1);
+                                    memset(params[paramsCount], 0, strlen(pch) + 1);
+                                    strcpy(params[paramsCount], pch);
+                                    paramsCount++;
+                            }
+",
+2021\enemy\servertor.c,Dataset Download,../../Dataset Download/2021\enemy\servertor.c,"strcpy(wot, msg);",120,0,"        char *wot = malloc(strlen(msg) + 10);
+        memset(wot, 0, strlen(msg) + 10);
+        strcpy(wot, msg);
+        trim(wot);
+        time_t rawtime;
+",
+2021\enemy\servertor.c,Dataset Download,../../Dataset Download/2021\enemy\servertor.c,"strcpy(clients->arch, arch);",120,0,"                    {
+                        char *arch = strtok(buf, "" "")+sizeof(arch)-3;
+                        strcpy(clients->arch, arch);
+                        strcpy(clients[datafd].arch, arch);
+                    }
+",
+2021\enemy\servertor.c,Dataset Download,../../Dataset Download/2021\enemy\servertor.c,"strcpy(clients[datafd].arch, arch);",120,0,"                        char *arch = strtok(buf, "" "")+sizeof(arch)-3;
+                        strcpy(clients->arch, arch);
+                        strcpy(clients[datafd].arch, arch);
+                    }
+						
+",
+2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\generalFunctions.cpp,Dataset Download,../../Dataset Download/2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\generalFunctions.cpp,"strcpy( combinedData.timestamp, now );",120,?,"    char now[30];
+    getTextFormatTimeinMilliseconds(now);
+    strcpy( combinedData.timestamp, now );
+
+    // Data will be generated for a single arbitrary defined MAC address.
+",
+2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactData.cpp,Dataset Download,../../Dataset Download/2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactData.cpp,"strcpy( buffer[index].timestamp, now );",120,?,"            char now[30];
+            getTextFormatTimeinMilliseconds( now );
+            strcpy( buffer[index].timestamp, now );
+            
+            //printCombinedWiFiDeviceData( buffer[index] );
+",
+2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactFileSystem.cpp,Dataset Download,../../Dataset Download/2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactFileSystem.cpp,"strcpy( g_espConfigData.ssid, configJsonObj[""ssid""] );",120,?,"    configJsonObj = getConfigFile( SPIFFS, configDynJsonDoc, path_to_file );
+#endif
+    strcpy( g_espConfigData.ssid, configJsonObj[""ssid""] );
+    strcpy( g_espConfigData.pswd, configJsonObj[""pswd""] );
+    g_espConfigData.am_i_master = configJsonObj[""am_i_master""];
+",
+2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactFileSystem.cpp,Dataset Download,../../Dataset Download/2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactFileSystem.cpp,"strcpy( g_espConfigData.pswd, configJsonObj[""pswd""] );",120,?,"#endif
+    strcpy( g_espConfigData.ssid, configJsonObj[""ssid""] );
+    strcpy( g_espConfigData.pswd, configJsonObj[""pswd""] );
+    g_espConfigData.am_i_master = configJsonObj[""am_i_master""];
+    g_espConfigData.rssi_1m = configJsonObj[""RSSI_1m""];
+",
+2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactLoRa.cpp,Dataset Download,../../Dataset Download/2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactLoRa.cpp,"strcpy( WiFiDevicePayload.mac, incomingPayload.substring(pos1 + 1, pos2).c_str() );",120,?,"
+        WiFiDevicePayload.packetID = (uint32_t) strtoul( incomingPayload.substring(0, pos1).c_str(), NULL, 0 );   // packetID
+        strcpy( WiFiDevicePayload.mac, incomingPayload.substring(pos1 + 1, pos2).c_str() );                       // MAC Address
+        WiFiDevicePayload.rssi = (int8_t) incomingPayload.substring(pos2 + 1, pos3).toInt();                      // RSSI
+
+",
+2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactNTP.cpp,Dataset Download,../../Dataset Download/2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactNTP.cpp,"strcpy( arr_ms_frac, uint64_to_string( ms_frac ).c_str() );",120,?,"    ms_frac = (uint64_t) tv.tv_usec / 1000LL;
+    char arr_ms_frac[4] = {0};
+    strcpy( arr_ms_frac, uint64_to_string( ms_frac ).c_str() );
+    strcat( buf, arr_ms_frac );
+
+",
+2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactNTP.cpp,Dataset Download,../../Dataset Download/2021\ESP32WiFiSnifferApp\ESP32WiFiSnifferApp\src\interactNTP.cpp,"strcpy( arr_us_frac, uint64_to_string( us_frac ).c_str() );",120,?,"    us_frac = (uint64_t) tv.tv_usec;
+    char arr_us_frac[4] = {0};
+    strcpy( arr_us_frac, uint64_to_string( us_frac ).c_str() );
+    strcat( buf, arr_us_frac );
+
+",
+2021\fusor-node-connector\src\NodeConnector.cpp,Dataset Download,../../Dataset Download/2021\fusor-node-connector\src\NodeConnector.cpp,"strcpy(_timeStampBuff, hubClient.timeStamp);",120,?,"
+  if (hubClient.timeStamp[0])
+    strcpy(_timeStampBuff, hubClient.timeStamp);
+  else
+    _timeStampBuff[0] = '\0';
+",
+2021\fusor-node-connector\src\NodeConnector.cpp,Dataset Download,../../Dataset Download/2021\fusor-node-connector\src\NodeConnector.cpp,"strcpy((char *)_postUrl, _hubAddress);",120,0,"  size_t urlSize = strlen(_hubAddress) + strlen(ENDPOINT_NODE) + strlen(nodeId) + strlen(ENDPOINT_PARAM_BATCH) + 1;
+  _postUrl = (const char *)new char[urlSize];
+  strcpy((char *)_postUrl, _hubAddress);
+  strcat((char *)_postUrl, ENDPOINT_NODE);
+  strcat((char *)_postUrl, nodeId);
+",
+2021\fusor-node-connector\src\HubClient\HubClient.cpp,Dataset Download,../../Dataset Download/2021\fusor-node-connector\src\HubClient\HubClient.cpp,"strcpy(ip, ""-"");",120,0,"  }
+
+  strcpy(ip, ""-"");
+
+  return false;
+",
+2021\fusor-node-connector\src\SyncInOptions\SyncInOptions.cpp,Dataset Download,../../Dataset Download/2021\fusor-node-connector\src\SyncInOptions\SyncInOptions.cpp,"strcpy(url, (char *)baseUrl);",120,0,"    char *url = new char[urlLen];
+
+    strcpy(url, (char *)baseUrl);
+    strcat(url, HUB_REQUEST_PATH);
+
+",
+2021\fusor-state-machine\src\StateMachine.cpp,Dataset Download,../../Dataset Download/2021\fusor-state-machine\src\StateMachine.cpp,"strcpy(buff, actionId);",120,0,"  char *pluginId, *pluginActionId;
+  char buff[strlen(actionId) + 1];
+  strcpy(buff, actionId);
+  pluginId = strtok(buff, ""."");
+  pluginActionId = strtok(NULL, """");
+",
+2021\fusor-state-machine\src\keycreate\keycreate.cpp,Dataset Download,../../Dataset Download/2021\fusor-state-machine\src\keycreate\keycreate.cpp,"strcpy(buff, name);",120,0,"{
+    char *buff = new char[strlen(name) + 1];
+    strcpy(buff, name);
+    return buff;
+}
+",
+2021\fusor-state-machine\test\test.cpp,Dataset Download,../../Dataset Download/2021\fusor-state-machine\test\test.cpp,"strcpy(_jsonBuff, ""{\""v\"":"");",120,0,"JsonVariant makeVariant(const char *json)
+{
+  strcpy(_jsonBuff, ""{\""v\"":"");
+  strcat(_jsonBuff, json);
+  strcat(_jsonBuff, ""}"");
+",
+2021\fusor-wifi-configurator\src\WifiConfigurator.cpp,Dataset Download,../../Dataset Download/2021\fusor-wifi-configurator\src\WifiConfigurator.cpp,"strcpy(buff, value);",120,1,"{
+  char *buff = new char[strlen(value)];
+  strcpy(buff, value);
+  return buff;
+}
+",
+2021\haas-mini-program\adapter\platform\linux\network\amp_udp.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\adapter\platform\linux\network\amp_udp.c,"strcpy((char *)p_remote->addr, inet_ntoa(addr.sin_addr));",120,?,"            p_remote->port = ntohs(addr.sin_port);
+
+            strcpy((char *)p_remote->addr, inet_ntoa(addr.sin_addr));
+        }
+
+",
+2021\haas-mini-program\components\das\src\service\service_fscan.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\das\src\service\service_fscan.c,"strcpy(scan_paths[scan_paths_cnt], path);",120,0,"        scan_paths[scan_paths_cnt] = malloc(sizeof(char) * (len + 1));
+        if (scan_paths[scan_paths_cnt]) {
+            strcpy(scan_paths[scan_paths_cnt], path);
+            scan_paths[scan_paths_cnt][len] = '\0';
+            scan_paths_cnt++;
+",
+2021\haas-mini-program\components\das\src\service\service_fscan.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\das\src\service\service_fscan.c,"strcpy(path_tmp, path);",120,0,"        char path_tmp[PATH_MAX] = {0};
+
+        strcpy(path_tmp, path);
+        if (path[strlen(path) -1] != '/') {
+            strcat(path_tmp, ""/"");
+",
+2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,"strcpy((char *)output, ""\""\"""");",120,?,"            return false;
+        }
+        strcpy((char *)output, ""\""\"""");
+
+        return true;
+",
+2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,"strcpy((char *)output, ""null"");",120,0,"                return false;
+            }
+            strcpy((char *)output, ""null"");
+            return true;
+
+",
+2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,"strcpy((char *)output, ""false"");",120,0,"                return false;
+            }
+            strcpy((char *)output, ""false"");
+            return true;
+
+",
+2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\linkkit\infra\infra_cjson.c,"strcpy((char *)output, ""true"");",120,0,"                return false;
+            }
+            strcpy((char *)output, ""true"");
+            return true;
+
+",
+2021\haas-mini-program\components\ota\hal\ota_hal_fs_plat.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\ota\hal\ota_hal_fs_plat.c,"strcpy(version, ""0.0.0"");",120,1,"        if(fptr == NULL) {
+            OTA_LOG_I(""can't find app.json file\r\n"");
+            strcpy(version, ""0.0.0"");//app.json is null default ver = 0.0.0
+        }
+        else {
+",
+2021\haas-mini-program\components\ota\ota_agent\tools\upack_data_file.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\components\ota\ota_agent\tools\upack_data_file.c,"strcpy(tmp_file_name, upack_path);",120,1,"       memset(&file_info, 0x00, sizeof(data_file_infor_t));
+       upack_path_len = strlen(upack_path);
+       strcpy(tmp_file_name, upack_path);
+       if(tmp_file_name[upack_path_len] != '/') {
+          tmp_file_name[upack_path_len++] = '/'; 
+",
+2021\haas-mini-program\engine\duktape_engine\be.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\be.c,"strcpy(base, parent);",120,0,"        snprintf(base, sizeof(base), ""%s/%s"", node_modules_path, module_id);
+    } else {
+        strcpy(base, parent);
+        char *last_slash = strrchr(base, '/');
+        if (last_slash) last_slash[0] = '\0';
+",
+2021\haas-mini-program\engine\duktape_engine\be.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\be.c,"strcpy(resolved_path, base);",120,0,"    amp_debug(MOD_STR, ""base: %s, ret: %d\n"", base, ret);
+    if (!ret && amp_fs_type(sb.st_mode)) {
+        strcpy(resolved_path, base);
+        return resolved_path;
+    }
+",
+2021\haas-mini-program\engine\duktape_engine\addons\network\udp\module_udp.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\addons\network\udp\module_udp.c,"strcpy(p->src_ip, addr_info.addr);",120,?,"    while(1) {
+        p->recv_len = amp_udp_recvfrom(sock_id, &addr_info, p->buf, sizeof(p->buf), MAX_UDP_RECV_TIMEOUT);
+        strcpy(p->src_ip, addr_info.addr);
+        p->src_port  = addr_info.port;
+        p->js_cb_ref = recv_param->js_cb_ref;
+",
+2021\haas-mini-program\engine\duktape_engine\addons\utils\builtin\module_builtin.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\duktape_engine\addons\utils\builtin\module_builtin.c,"strcpy(json_data + strlen(GLOBAL_APPCONFIG_STRING_1) + len, GLOBAL_APPCONFIG_STRING_2);",120,?,"    strncpy(json_data, GLOBAL_APPCONFIG_STRING_1, global_config_len);
+    amp_fread(json_data + strlen(GLOBAL_APPCONFIG_STRING_1), 1, len, json_fd);
+    strcpy(json_data + strlen(GLOBAL_APPCONFIG_STRING_1) + len, GLOBAL_APPCONFIG_STRING_2);
+
+    if (duk_peval_string(ctx, json_data) != DUK_EXEC_SUCCESS) {
+",
+2021\haas-mini-program\engine\lite_engine\core\be_executor.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\engine\lite_engine\core\be_executor.c,"strcpy(objectName, vm.lex->token);",120,?,"            } else if (vm.lex->tk == '.') {
+#ifndef BE_JSE_SILENT
+                strcpy(objectName, vm.lex->token);
+#endif
+                LEXER_MATCH('.');
+",
+2021\haas-mini-program\services\app_mgr\app_mgr.c,Dataset Download,../../Dataset Download/2021\haas-mini-program\services\app_mgr\app_mgr.c,"strcpy(url, ""http:",120,0,"    char *host_addr     = NULL;
+    char *url = amp_malloc(256);
+    strcpy(url, ""http://appengine.oss-cn-hangzhou.aliyuncs.com/a1WGzkI1GJR.engine_001/1582118016285.bin"");
+   
+    amp_warn(MOD_STR, ""url = %s"", url);
+",
+2021\HFU-TFunIoT-SoSe21\testing\playground\src\main.cpp,Dataset Download,../../Dataset Download/2021\HFU-TFunIoT-SoSe21\testing\playground\src\main.cpp,"strcpy(current_db, filename);",120,1,"    {
+        Serial.printf(""Opened database successfully\n"");
+        strcpy(current_db, filename);
+    }
+    return rc;
+",
+2021\iot2020-2021\sekkyone\main.c,Dataset Download,../../Dataset Download/2021\iot2020-2021\sekkyone\main.c,"strcpy(topics[0], MQTT_TOPIC_IN);",120,?,"    unsigned flags = EMCUTE_QOS_0;
+    subscriptions[0].cb = on_pub;
+    strcpy(topics[0], MQTT_TOPIC_IN);
+    subscriptions[0].topic.name = MQTT_TOPIC_IN;
+
+",
+2021\iot2020-2021\sekkyone\main.c,Dataset Download,../../Dataset Download/2021\iot2020-2021\sekkyone\main.c,"strcpy(sensors.temp, temp_s);",120,0,"        }
+
+        strcpy(sensors.temp, temp_s);
+        strcpy(sensors.hum, hum_s);
+        sensors.sample_flame = sample;
+",
+2021\iot2020-2021\sekkyone\main.c,Dataset Download,../../Dataset Download/2021\iot2020-2021\sekkyone\main.c,"strcpy(sensors.hum, hum_s);",120,0,"
+        strcpy(sensors.temp, temp_s);
+        strcpy(sensors.hum, hum_s);
+        sensors.sample_flame = sample;
+        sensors.level_flame = flame;
+",
+2021\IOTProject\Maintain\doorAccess\doorAccessRef.c,Dataset Download,../../Dataset Download/2021\IOTProject\Maintain\doorAccess\doorAccessRef.c,"strcpy(pass[0], ""ABCDEFFF"");",120,0,"    for (int i = 0; i < 100; i++)
+        pass[i] = (char *) calloc(sizeof(char), 9);
+    strcpy(pass[0], ""ABCDEFFF""); // pass[0] = ""ABCDEFFF""
+    strcpy(pass[1], ""DEADDEAD"");
+    strcpy(pass[2], ""87654321"");
+",
+2021\IOTProject\Maintain\doorAccess\doorAccessRef.c,Dataset Download,../../Dataset Download/2021\IOTProject\Maintain\doorAccess\doorAccessRef.c,"strcpy(pass[1], ""DEADDEAD"");",120,0,"        pass[i] = (char *) calloc(sizeof(char), 9);
+    strcpy(pass[0], ""ABCDEFFF""); // pass[0] = ""ABCDEFFF""
+    strcpy(pass[1], ""DEADDEAD"");
+    strcpy(pass[2], ""87654321"");
+    int idx = 3;
+",
+2021\IOTProject\Maintain\doorAccess\doorAccessRef.c,Dataset Download,../../Dataset Download/2021\IOTProject\Maintain\doorAccess\doorAccessRef.c,"strcpy(pass[2], ""87654321"");",120,0,"    strcpy(pass[0], ""ABCDEFFF""); // pass[0] = ""ABCDEFFF""
+    strcpy(pass[1], ""DEADDEAD"");
+    strcpy(pass[2], ""87654321"");
+    int idx = 3;
+ 
+",
+2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonDocument\ElementProxy.cpp,Dataset Download,../../Dataset Download/2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonDocument\ElementProxy.cpp,"strcpy(s, ""!!!!!"");",120,0,"    char s[] = ""world"";
+    ep.add(s);
+    strcpy(s, ""!!!!!"");
+
+    REQUIRE(doc.as<std::string>() == ""[[\""world\""]]"");
+",
+2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonDocument\ElementProxy.cpp,Dataset Download,../../Dataset Download/2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonDocument\ElementProxy.cpp,"strcpy(vla, ""b"");",120,0,"    int i = 4;
+    char vla[i];
+    strcpy(vla, ""b"");
+    ep.remove(vla);
+
+",
+2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonVariant\set.cpp,Dataset Download,../../Dataset Download/2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonVariant\set.cpp,"strcpy(str, ""hello"");",120,0,"    char str[16];
+
+    strcpy(str, ""hello"");
+    bool result = variant.set(static_cast<const char *>(str));
+    strcpy(str, ""world"");
+",
+2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonVariant\set.cpp,Dataset Download,../../Dataset Download/2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\JsonVariant\set.cpp,"strcpy(str, ""world"");",120,0,"    strcpy(str, ""hello"");
+    bool result = variant.set(static_cast<const char *>(str));
+    strcpy(str, ""world"");
+
+    REQUIRE(result == true);
+",
+2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\MsgPackDeserializer\filter.cpp,Dataset Download,../../Dataset Download/2021\Powergy-Medusa-FW-Basic-Auth\lib\ArduinoJson\extras\tests\MsgPackDeserializer\filter.cpp,"strcpy(vla, ""{}"");",120,0,"    int i = 4;
+    char vla[i];
+    strcpy(vla, ""{}"");
+    deserializeMsgPack(doc, vla, Filter(filter));
+  }
+",
+2021\qemu-arm-testsuite\k8s\pods\emu_device\code\message_definitions.h,Dataset Download,../../Dataset Download/2021\qemu-arm-testsuite\k8s\pods\emu_device\code\message_definitions.h,"strcpy(broken_motor.payload, ""please replace the motor"");",120,0,"
+broken_motor.id = 0;
+strcpy(broken_motor.payload, ""please replace the motor"");
+
+
+",
+2021\riotos-apps\tft_mqtts\main.c,Dataset Download,../../Dataset Download/2021\riotos-apps\tft_mqtts\main.c,"strcpy(topics[0], MQTT_TOPIC);",120,?,"    unsigned flags = EMCUTE_QOS_0;
+    subscriptions[0].cb = on_pub;
+    strcpy(topics[0], MQTT_TOPIC);
+    subscriptions[0].topic.name = MQTT_TOPIC;
+
+",
+2021\secure-iot-analysis-ecoin-platform\collector\collector.c,Dataset Download,../../Dataset Download/2021\secure-iot-analysis-ecoin-platform\collector\collector.c,"strcpy(filename,prefix);",120,0,"	char *filename;
+	filename = malloc(strlen(prefix)+strlen(c)+1);
+	strcpy(filename,prefix);
+	strcat(filename, c);
+	if (rename(c,filename) == 0){
+",
+2021\secure-iot-analysis-ecoin-platform\collector\collector.c,Dataset Download,../../Dataset Download/2021\secure-iot-analysis-ecoin-platform\collector\collector.c,"strcpy(wallet[walletSize++],filename);",120,1,"	//struct CoinChain *cl;
+	//c = malloc(sizeof(coin));
+	strcpy(wallet[walletSize++],filename);
+	free(filename); // CHECK
+}
+",
+2021\secure-iot-analysis-ecoin-platform\collector\collector.c,Dataset Download,../../Dataset Download/2021\secure-iot-analysis-ecoin-platform\collector\collector.c,"strcpy(outputFilename,COIN_DIR);",120,0,"	}
+	outputFilename = malloc(1+strlen(COIN_DIR)+length/2);
+	strcpy(outputFilename,COIN_DIR);
+	strcat(outputFilename,filename);
+	writeFile(outputFilename, buffer, length);
+",
+2021\secure-iot-analysis-ecoin-platform\collector\collector.c,Dataset Download,../../Dataset Download/2021\secure-iot-analysis-ecoin-platform\collector\collector.c,"strcpy(source,prefix);",120,0,"				newLength = strlen(&argv[1][2])+strlen(prefix)+1;
+				source = calloc(1,newLength);
+				strcpy(source,prefix);
+				strcat(source,&argv[1][2]);
+				COLLECTOR_INTERFACE = source;
+",
+2021\stm32-rtc-scheduler\lib\FreeRTOS\tasks.c,Dataset Download,../../Dataset Download/2021\stm32-rtc-scheduler\lib\FreeRTOS\tasks.c,"strcpy( pcBuffer, pcTaskName );",120,1,"
+		/* Start by copying the entire string. */
+		strcpy( pcBuffer, pcTaskName );
+
+		/* Pad the end of the string with spaces to ensure columns line up when
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_elp_1plug\src\tuya_dp_upload.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_elp_1plug\src\tuya_dp_upload.c,"strcpy(obj_dp->value.dp_str, dp_str);",120,0,"            return;
+        }
+        strcpy(obj_dp->value.dp_str, dp_str);
+    }else{
+        obj_dp->value.dp_str = NULL;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy(hsv_temp, str_temp);",120,0,"
+    tuya_num_to_str(4, h_temp, 5, str_temp);
+    strcpy(hsv_temp, str_temp);
+
+    tuya_num_to_str(4, s_temp, 5, str_temp);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy((CHAR_T*)&sg_light_ctrl_data.color_origin.color_str, hsv_temp);",120,?,"    tuya_num_to_str(4, v_temp, 5, str_temp);
+    strcat(hsv_temp, str_temp);
+    strcpy((CHAR_T*)&sg_light_ctrl_data.color_origin.color_str, hsv_temp);
+
+    PR_DEBUG(""default color origin string %s"", sg_light_ctrl_data.color_origin.color_str);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy((CHAR_T*)&sg_light_ctrl_data.color_origin.color_str, (CHAR_T*)&app_data.color_origin.color_str);",120,?,"        sg_light_ctrl_data.color_origin.sat = app_data.color_origin.sat;
+        sg_light_ctrl_data.color_origin.value = app_data.color_origin.value;
+        strcpy((CHAR_T*)&sg_light_ctrl_data.color_origin.color_str, (CHAR_T*)&app_data.color_origin.color_str);
+        memcpy(&sg_light_ctrl_data.scene, &app_data.scene, SIZEOF(app_data.scene));
+        sg_light_ctrl_data.scene_first_set = TRUE;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy(last_scene_data, (CHAR_T *)&sg_light_ctrl_data.scene);",120,0,"    CHAR_T last_scene_data[SCENE_MAX_LENGTH + 1] = {0};
+
+    strcpy(last_scene_data, (CHAR_T *)&sg_light_ctrl_data.scene);
+
+    if ((strlen(scene_data) < SCENE_MIN_LENGTH) || (strlen(scene_data) > SCENE_MAX_LENGTH)) {
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy((CHAR_T*)&sg_light_ctrl_data.scene, scene_data);",120,?,"    }
+
+    strcpy((CHAR_T*)&sg_light_ctrl_data.scene, scene_data);
+    PR_DEBUG(""light ctrl scene buf %s"", sg_light_ctrl_data.scene);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy(scene_data, (CHAR_T*)&sg_light_ctrl_data.scene);",120,0,"    PR_DEBUG(""str len %d"", strlen(sg_light_ctrl_data.scene));
+
+    strcpy(scene_data, (CHAR_T*)&sg_light_ctrl_data.scene);
+
+    return LIGHT_OK;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy((CHAR_T*)&sg_light_ctrl_data.realtime_data, realtime_data);",120,?,"    }
+
+    strcpy((CHAR_T*)&sg_light_ctrl_data.realtime_data, realtime_data);
+
+    PR_DEBUG(""light real time adjust ctrl data buf %s"", sg_light_ctrl_data.realtime_data);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\apps\tuya_demo_light_pwm\src\light_app\light_control.c,"strcpy((CHAR_T*)&save_data.color_origin.color_str, (CHAR_T*)&sg_light_ctrl_data.color_origin.color_str);",120,?,"    save_data.color_origin.sat = sg_light_ctrl_data.color_origin.sat;
+    save_data.color_origin.value  = sg_light_ctrl_data.color_origin.value;
+    strcpy((CHAR_T*)&save_data.color_origin.color_str, (CHAR_T*)&sg_light_ctrl_data.color_origin.color_str);
+    memcpy(&save_data.scene, &sg_light_ctrl_data.scene, SIZEOF(sg_light_ctrl_data.scene));
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\ftp\ftpd.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\ftp\ftpd.c,"strcpy(fsm->renamefrom, arg);",120,1,"        return;
+    }
+    strcpy(fsm->renamefrom, arg);
+    fsm->state = FTPD_RNFR;
+    send_msg(pcb, fsm, msg350);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.local_ip_addr, APP_DRONE_DEF_NET_IP);",120,?,"        general.dhcp_enable = 1,
+
+        os_strcpy((char *)wNetConfig.local_ip_addr, APP_DRONE_DEF_NET_IP);
+        os_strcpy((char *)wNetConfig.net_mask, APP_DRONE_DEF_NET_MASK);
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, APP_DRONE_DEF_NET_GW);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.net_mask, APP_DRONE_DEF_NET_MASK);",120,?,"
+        os_strcpy((char *)wNetConfig.local_ip_addr, APP_DRONE_DEF_NET_IP);
+        os_strcpy((char *)wNetConfig.net_mask, APP_DRONE_DEF_NET_MASK);
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, APP_DRONE_DEF_NET_GW);
+    } else {
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.dns_server_ip_addr, APP_DRONE_DEF_NET_GW);",120,?,"        os_strcpy((char *)wNetConfig.local_ip_addr, APP_DRONE_DEF_NET_IP);
+        os_strcpy((char *)wNetConfig.net_mask, APP_DRONE_DEF_NET_MASK);
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, APP_DRONE_DEF_NET_GW);
+    } else {
+        APP_DRONE_PRT(""read flash configuration:\r\n"");
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.local_ip_addr, inet_ntoa(general.ip_addr));",120,?,"        general.ip_gw = htonl(general.ip_gw);
+
+        os_strcpy((char *)wNetConfig.local_ip_addr, inet_ntoa(general.ip_addr));
+        os_strcpy((char *)wNetConfig.net_mask, inet_ntoa(general.ip_mask));
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, inet_ntoa(general.ip_gw));
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.net_mask, inet_ntoa(general.ip_mask));",120,?,"
+        os_strcpy((char *)wNetConfig.local_ip_addr, inet_ntoa(general.ip_addr));
+        os_strcpy((char *)wNetConfig.net_mask, inet_ntoa(general.ip_mask));
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, inet_ntoa(general.ip_gw));
+    }
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.dns_server_ip_addr, inet_ntoa(general.ip_gw));",120,?,"        os_strcpy((char *)wNetConfig.local_ip_addr, inet_ntoa(general.ip_addr));
+        os_strcpy((char *)wNetConfig.net_mask, inet_ntoa(general.ip_mask));
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, inet_ntoa(general.ip_gw));
+    }
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.wifi_ssid, ap_info.ssid.array);",120,?,"    }
+
+    os_strcpy((char *)wNetConfig.wifi_ssid, ap_info.ssid.array);
+    os_strcpy((char *)wNetConfig.wifi_key, ap_info.key);
+    
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\net_work\app_drone.c,"os_strcpy((char *)wNetConfig.wifi_key, ap_info.key);",120,?,"
+    os_strcpy((char *)wNetConfig.wifi_ssid, ap_info.ssid.array);
+    os_strcpy((char *)wNetConfig.wifi_key, ap_info.key);
+    
+    wNetConfig.wifi_mode = SOFT_AP;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,"os_strcpy ((char *)pkt, BootFile);",120,?,"        *s++ = htons(TFTP_RRQ);
+        pkt = (uint8_t *)s;
+        os_strcpy ((char *)pkt, BootFile);
+        pkt += os_strlen(BootFile) + 1;
+        os_strcpy ((char *)pkt, ""octet"");
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,"os_strcpy ((char *)pkt, ""octet"");",120,?,"        os_strcpy ((char *)pkt, BootFile);
+        pkt += os_strlen(BootFile) + 1;
+        os_strcpy ((char *)pkt, ""octet"");
+        pkt += 5 /*strlen(""octet"")*/ + 1;
+        os_strcpy ((char *)pkt, ""timeout"");
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,"os_strcpy ((char *)pkt, ""timeout"");",120,?,"        os_strcpy ((char *)pkt, ""octet"");
+        pkt += 5 /*strlen(""octet"")*/ + 1;
+        os_strcpy ((char *)pkt, ""timeout"");
+        pkt += 7 /*strlen(""timeout"")*/ + 1;
+        sprintf((char *)pkt, ""%lu"", TIMEOUT);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,"os_strcpy ((char *)pkt, ""File too large"");",120,?,"        *s++ = htons(3);
+        pkt = (uint8_t *)s;
+        os_strcpy ((char *)pkt, ""File too large"");
+        pkt += 14 /*strlen(""File too large"")*/ + 1;
+        len = pkt - xp;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\app\tftp\tftpclient.c,"os_strcpy ((char *)pkt, ""File has bad magic"");",120,?,"        *s++ = htons(2);
+        pkt = (uint8_t *)s;
+        os_strcpy ((char *)pkt, ""File has bad magic"");
+        pkt += 18 /*strlen(""File has bad magic"")*/ + 1;
+        len = pkt - xp;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.wifi_ssid, ap_ssid);",120,?,"    }
+
+    os_strcpy((char *)wNetConfig.wifi_ssid, ap_ssid);
+    os_strcpy((char *)wNetConfig.wifi_key, ap_key);
+    
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.wifi_key, ap_key);",120,?,"
+    os_strcpy((char *)wNetConfig.wifi_ssid, ap_ssid);
+    os_strcpy((char *)wNetConfig.wifi_key, ap_key);
+    
+    wNetConfig.wifi_mode = SOFT_AP;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.local_ip_addr, WLAN_DEFAULT_IP);",120,?,"    wNetConfig.dhcp_mode = DHCP_SERVER;
+    wNetConfig.wifi_retry_interval = 100;
+    os_strcpy((char *)wNetConfig.local_ip_addr, WLAN_DEFAULT_IP);
+    os_strcpy((char *)wNetConfig.net_mask, WLAN_DEFAULT_MASK);
+    os_strcpy((char *)wNetConfig.gateway_ip_addr, WLAN_DEFAULT_GW);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.net_mask, WLAN_DEFAULT_MASK);",120,?,"    wNetConfig.wifi_retry_interval = 100;
+    os_strcpy((char *)wNetConfig.local_ip_addr, WLAN_DEFAULT_IP);
+    os_strcpy((char *)wNetConfig.net_mask, WLAN_DEFAULT_MASK);
+    os_strcpy((char *)wNetConfig.gateway_ip_addr, WLAN_DEFAULT_GW);
+    os_strcpy((char *)wNetConfig.dns_server_ip_addr, WLAN_DEFAULT_IP);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.gateway_ip_addr, WLAN_DEFAULT_GW);",120,?,"    os_strcpy((char *)wNetConfig.local_ip_addr, WLAN_DEFAULT_IP);
+    os_strcpy((char *)wNetConfig.net_mask, WLAN_DEFAULT_MASK);
+    os_strcpy((char *)wNetConfig.gateway_ip_addr, WLAN_DEFAULT_GW);
+    os_strcpy((char *)wNetConfig.dns_server_ip_addr, WLAN_DEFAULT_IP);
+    
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.dns_server_ip_addr, WLAN_DEFAULT_IP);",120,?,"    os_strcpy((char *)wNetConfig.net_mask, WLAN_DEFAULT_MASK);
+    os_strcpy((char *)wNetConfig.gateway_ip_addr, WLAN_DEFAULT_GW);
+    os_strcpy((char *)wNetConfig.dns_server_ip_addr, WLAN_DEFAULT_IP);
+    
+    bk_printf(""ssid:%s  key:%s\r\n"", wNetConfig.wifi_ssid, wNetConfig.wifi_key);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.wifi_ssid, oob_ssid);",120,?,"    }
+    
+	os_strcpy((char *)wNetConfig.wifi_ssid, oob_ssid);
+	os_strcpy((char *)wNetConfig.wifi_key, connect_key);
+    
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)wNetConfig.wifi_key, connect_key);",120,?,"    
+	os_strcpy((char *)wNetConfig.wifi_ssid, oob_ssid);
+	os_strcpy((char *)wNetConfig.wifi_key, connect_key);
+    
+	wNetConfig.wifi_mode = STATION;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char*)wNetConfigAdv.ap_info.ssid, oob_ssid);",120,?,"	os_memset( &wNetConfigAdv, 0x0, sizeof(network_InitTypeDef_adv_st) );
+	
+	os_strcpy((char*)wNetConfigAdv.ap_info.ssid, oob_ssid);
+	hwaddr_aton(""48:ee:0c:48:93:12"", (unsigned char*)wNetConfigAdv.ap_info.bssid);
+	wNetConfigAdv.ap_info.security = SECURITY_TYPE_WPA2_MIXED;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char*)wNetConfigAdv.key, connect_key);",120,?,"	wNetConfigAdv.ap_info.channel = 11;
+	
+	os_strcpy((char*)wNetConfigAdv.key, connect_key);
+	wNetConfigAdv.key_len = os_strlen(connect_key);
+	wNetConfigAdv.dhcp_mode = DHCP_CLIENT;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char*)networkadv_cfg.ap_info.ssid, cfg->ssid);",120,?,"        	os_memset( &networkadv_cfg, 0x0, sizeof(network_InitTypeDef_adv_st) );
+        	
+        	os_strcpy((char*)networkadv_cfg.ap_info.ssid, cfg->ssid);
+        	hwaddr_aton(""48:ee:0c:48:93:12"", (unsigned char*)networkadv_cfg.ap_info.bssid);
+        	networkadv_cfg.ap_info.security = SECURITY_TYPE_WPA2_MIXED;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char*)networkadv_cfg.key, cfg->key);",120,?,"        	networkadv_cfg.ap_info.channel = 11;
+        	
+        	os_strcpy((char*)networkadv_cfg.key, cfg->key);
+        	networkadv_cfg.key_len = os_strlen(cfg->key);
+        	networkadv_cfg.dhcp_mode = DHCP_CLIENT;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)network_cfg.wifi_ssid, cfg->ssid);",120,?,"        	os_memset(&network_cfg, 0x0, sizeof(network_InitTypeDef_st));
+
+        	os_strcpy((char *)network_cfg.wifi_ssid, cfg->ssid);
+        	os_strcpy((char *)network_cfg.wifi_key, cfg->key);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)network_cfg.wifi_key, cfg->key);",120,?,"
+        	os_strcpy((char *)network_cfg.wifi_ssid, cfg->ssid);
+        	os_strcpy((char *)network_cfg.wifi_key, cfg->key);
+
+        	network_cfg.wifi_mode = STATION;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)network_cfg.local_ip_addr, WLAN_DEFAULT_IP);",120,?,"        network_cfg.dhcp_mode = DHCP_SERVER;
+        network_cfg.wifi_retry_interval = 100;
+        os_strcpy((char *)network_cfg.local_ip_addr, WLAN_DEFAULT_IP);
+        os_strcpy((char *)network_cfg.net_mask, WLAN_DEFAULT_MASK);
+        os_strcpy((char *)network_cfg.gateway_ip_addr, WLAN_DEFAULT_GW);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)network_cfg.net_mask, WLAN_DEFAULT_MASK);",120,?,"        network_cfg.wifi_retry_interval = 100;
+        os_strcpy((char *)network_cfg.local_ip_addr, WLAN_DEFAULT_IP);
+        os_strcpy((char *)network_cfg.net_mask, WLAN_DEFAULT_MASK);
+        os_strcpy((char *)network_cfg.gateway_ip_addr, WLAN_DEFAULT_GW);
+        os_strcpy((char *)network_cfg.dns_server_ip_addr, WLAN_DEFAULT_IP);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)network_cfg.gateway_ip_addr, WLAN_DEFAULT_GW);",120,?,"        os_strcpy((char *)network_cfg.local_ip_addr, WLAN_DEFAULT_IP);
+        os_strcpy((char *)network_cfg.net_mask, WLAN_DEFAULT_MASK);
+        os_strcpy((char *)network_cfg.gateway_ip_addr, WLAN_DEFAULT_GW);
+        os_strcpy((char *)network_cfg.dns_server_ip_addr, WLAN_DEFAULT_IP);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\demo\ieee802_11_demo.c,"os_strcpy((char *)network_cfg.dns_server_ip_addr, WLAN_DEFAULT_IP);",120,?,"        os_strcpy((char *)network_cfg.net_mask, WLAN_DEFAULT_MASK);
+        os_strcpy((char *)network_cfg.gateway_ip_addr, WLAN_DEFAULT_GW);
+        os_strcpy((char *)network_cfg.dns_server_ip_addr, WLAN_DEFAULT_IP);
+
+        bk_printf(""ssid:%s  key:%s\r\n"", network_cfg.wifi_ssid, network_cfg.wifi_key);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\driver\ble\ble_pub\modules\rwip\src\rwip.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\driver\ble\ble_pub\modules\rwip\src\rwip.c,"strcpy((char *) evt->file, file);",120,1,"    evt->param0 = param0;
+    evt->param1 = param1;
+    strcpy((char *) evt->file, file);
+    hci_send_2_host(evt);
+    #endif //(BT_EMB_PRESENT || (BLE_EMB_PRESENT && !BLE_HOST_PRESENT))
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\hostapd\main_none.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\hostapd\main_none.c,"os_strcpy(bss->iface, bss_iface);",120,?,"	bss = conf->last_bss;
+    
+	os_strcpy(bss->iface, bss_iface);
+    wifi_get_mac_address((char*)&bss->bssid, CONFIG_ROLE_AP);
+	/* set default driver based on configuration */
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\wpa_supplicant\config_none.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\hostapd-2.5\wpa_supplicant\config_none.c,"os_strcpy(ssid->psk, bssid_info.psk);",120,?,"		bk_printf(""Skip PSK caculation if SSID and passphrase are same \n"");
+		os_memset(&ssid->psk, 0, sizeof(ssid->psk));
+		os_strcpy(ssid->psk, bssid_info.psk);
+		ssid->psk_set = 1;
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,"os_strcpy((char*)bssid_info.pwd, g_sta_param_ptr->orig_key);",120,?,"	if (g_sta_param_ptr)
+	{
+		os_strcpy((char*)bssid_info.pwd, g_sta_param_ptr->orig_key);
+	}
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,"os_strcpy((char*)inNetworkInitParaAdv.ap_info.ssid, (char*)bssid_info->ssid);",120,?,"	os_memset(&inNetworkInitParaAdv, 0, sizeof(inNetworkInitParaAdv));
+	
+	os_strcpy((char*)inNetworkInitParaAdv.ap_info.ssid, (char*)bssid_info->ssid);
+	os_memcpy(inNetworkInitParaAdv.ap_info.bssid, bssid_info->bssid, 6);
+	inNetworkInitParaAdv.ap_info.security = bssid_info->security;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,"os_strcpy((char*)inNetworkInitParaAdv.key, (char*)bssid_info->pwd);",120,?,"	if(bssid_info->security < SECURITY_TYPE_WPA_TKIP)
+	{
+		os_strcpy((char*)inNetworkInitParaAdv.key, (char*)bssid_info->pwd);
+		inNetworkInitParaAdv.key_len = os_strlen((char*)bssid_info->pwd);
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\joint_up\role_launch.c,"os_strcpy((char*)inNetworkInitParaAdv.key, (char*)bssid_info->psk);",120,?,"	else
+	{
+		os_strcpy((char*)inNetworkInitParaAdv.key, (char*)bssid_info->psk);
+		inNetworkInitParaAdv.key_len = os_strlen((char*)bssid_info->psk);
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\tcp_server.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\tcp_server.c,"os_strcpy( client_ip_str, inet_ntoa( client_addr.sin_addr ) );",120,?,"            if ( client_fd >= 0 )
+            {
+                os_strcpy( client_ip_str, inet_ntoa( client_addr.sin_addr ) );
+                tcp_server_log( ""TCP Client %s:%d connected, fd: %d"", client_ip_str, client_addr.sin_port, client_fd );
+                if ( kNoErr
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,"strcpy(targetfile, ""fsdata.c"");",120,0,"  int i;
+  char targetfile[MAX_PATH_LEN];
+  strcpy(targetfile, ""fsdata.c"");
+
+  memset(path, 0, sizeof(path));
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,"strcpy(path, ""fs"");",120,0,"  os_printf(""     extended by Simon Goldschmidt  - 2009 "" NEWLINE NEWLINE);
+
+  strcpy(path, ""fs"");
+  for (i = 1; i < argc; i++) {
+    if (argv[i] == NULL) {
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,"strcpy(new_name, qualifiedName);",120,0,"      exit(-1);
+   }
+   strcpy(new_name, qualifiedName);
+   for (i = 0; i < len; i++) {
+      if (!is_valid_char_for_c_var(new_name[i])) {
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,"strcpy(qualifiedName, new_name);",120,1,"      exit(-1);
+   }
+   strcpy(qualifiedName, new_name);
+   os_free(new_name);
+}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,"strcpy(varname, qualifiedName);",120,0,"  sprintf(qualifiedName,""%s/%s"", curSubdir, filename);
+  /* create C variable name */
+  strcpy(varname, qualifiedName);
+  /* convert slashes & dots to underscores */
+  fix_filename_for_c(varname, MAX_PATH_LEN);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,"strcpy(lastFileVar, varname);",120,0,"  }
+  fprintf(struct_file, ""}};"" NEWLINE NEWLINE);
+  strcpy(lastFileVar, varname);
+
+  /* write actual file contents */
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\httpd\makefsdata\makefsdata.c,"strcpy(modbuf, ""Last-Modified: "");",120,0,"    memset(&stat_data, 0, sizeof(stat_data));
+    cur_string = modbuf;
+    strcpy(modbuf, ""Last-Modified: "");
+    if (stat(filename, &stat_data) != 0) {
+       os_printf(""stat(%s) failed with error %d\n"", filename, errno);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\snmp\snmp_msg.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\apps\snmp\snmp_msg.c,"strcpy((char*)request->community, snmp_community);",120,?,"    /* SNMPv3 doesn't use communities */
+    /* @todo: Differentiate read/write access */
+    strcpy((char*)request->community, snmp_community);
+    request->community_strlen = (u16_t)strlen(snmp_community);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\auth.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\auth.c,"strcpy(ap->word, word);",120,0,"		novm(""authorized addresses"");
+	    ap->word = (char *) (ap + 1);
+	    strcpy(ap->word, word);
+	    *app = ap;
+	    app = &ap->next;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\demand.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\demand.c,"strcpy(ipstr,inet_ntoa(*( (struct in_addr *) (pkt->data+16))));",120,?,"
+		/* Log Packet */
+		strcpy(ipstr,inet_ntoa(*( (struct in_addr *) (pkt->data+16))));
+		if (pkt->data[13] == 1) {
+		    syslog(LOG_INFO,""Open ICMP %s -> %s\n"",
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\eap.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\eap.c,"strcpy(rhostname, SRP_PSEUDO_ID);",120,?,"			/* Try to get a pseudonym */
+			if ((fd = open_pn_file(O_RDONLY)) >= 0) {
+				strcpy(rhostname, SRP_PSEUDO_ID);
+				len = read(fd, rhostname + SRP_PSEUDO_LEN,
+				    sizeof (rhostname) - SRP_PSEUDO_LEN);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\ipv6cp.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\ipv6cp.c,"strcpy(strlocal, llv6_ntoa(ipv6cp_gotoptions[0].ourid));",120,?,"
+    sprintf(strspeed, ""%d"", baud_rate);
+    strcpy(strlocal, llv6_ntoa(ipv6cp_gotoptions[0].ourid));
+    strcpy(strremote, llv6_ntoa(ipv6cp_hisoptions[0].hisid));
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\ipv6cp.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\ipv6cp.c,"strcpy(strremote, llv6_ntoa(ipv6cp_hisoptions[0].hisid));",120,?,"    sprintf(strspeed, ""%d"", baud_rate);
+    strcpy(strlocal, llv6_ntoa(ipv6cp_gotoptions[0].ourid));
+    strcpy(strremote, llv6_ntoa(ipv6cp_hisoptions[0].hisid));
+
+    argv[0] = script;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\utils.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\lwip_intf\lwip-2.0.2\src\netif\ppp\utils.c,"strcpy(dest, src);",120,0,"    if (len != 0) {
+	if (ret < len)
+	    strcpy(dest, src);
+	else {
+	    strncpy(dest, src, len - 1);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\uart_debug\command_line.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\uart_debug\command_line.c,"os_strcpy(cmdbuf, cmd);",120,?,"    }
+
+    os_strcpy(cmdbuf, cmd);
+
+    /* Process separators and check for invalid
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,"os_strcpy((char *)type.wifi_ssid, ap_ssid);",120,?,"    }
+
+    os_strcpy((char *)type.wifi_ssid, ap_ssid);
+    os_strcpy((char *)type.wifi_key, ap_key);
+    
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,"os_strcpy((char *)type.wifi_key, ap_key);",120,?,"
+    os_strcpy((char *)type.wifi_ssid, ap_ssid);
+    os_strcpy((char *)type.wifi_key, ap_key);
+    
+    type.wifi_mode = SOFT_AP;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,"os_strcpy((char *)type.local_ip_addr, LINK_WLAN_DEFAULT_IP);",120,?,"    type.dhcp_mode = DHCP_SERVER;
+    type.wifi_retry_interval = 100;
+    os_strcpy((char *)type.local_ip_addr, LINK_WLAN_DEFAULT_IP);
+    os_strcpy((char *)type.net_mask, LINK_WLAN_DEFAULT_MASK);
+    os_strcpy((char *)type.dns_server_ip_addr, LINK_WLAN_DEFAULT_GW);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,"os_strcpy((char *)type.net_mask, LINK_WLAN_DEFAULT_MASK);",120,?,"    type.wifi_retry_interval = 100;
+    os_strcpy((char *)type.local_ip_addr, LINK_WLAN_DEFAULT_IP);
+    os_strcpy((char *)type.net_mask, LINK_WLAN_DEFAULT_MASK);
+    os_strcpy((char *)type.dns_server_ip_addr, LINK_WLAN_DEFAULT_GW);
+    
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,"os_strcpy((char *)type.dns_server_ip_addr, LINK_WLAN_DEFAULT_GW);",120,?,"    os_strcpy((char *)type.local_ip_addr, LINK_WLAN_DEFAULT_IP);
+    os_strcpy((char *)type.net_mask, LINK_WLAN_DEFAULT_MASK);
+    os_strcpy((char *)type.dns_server_ip_addr, LINK_WLAN_DEFAULT_GW);
+    
+    aos_cli_printf(""ssid:%s  key:%s\r\n"", type.wifi_ssid, type.wifi_key);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,"os_strcpy((char *)type.wifi_ssid, oob_ssid);",120,?,"    }
+    
+	os_strcpy((char *)type.wifi_ssid, oob_ssid);
+	os_strcpy((char *)type.wifi_key, connect_key);
+    
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\extral_cli.c,"os_strcpy((char *)type.wifi_key, connect_key);",120,?,"    
+	os_strcpy((char *)type.wifi_ssid, oob_ssid);
+	os_strcpy((char *)type.wifi_key, connect_key);
+    
+	type.wifi_mode = STATION;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_cli.c,"os_strcpy(BootFile,argv[2]);",120,?,"     os_printf(""%s\r\n"",argv[1]);
+
+    os_strcpy(BootFile,argv[2]);
+    os_printf(""%s\r\n"",BootFile);
+    string_to_ip (argv[1]);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,"os_strcpy(outNetpara->ip, inet_ntoa(addr.ipv4.address));",120,?,"    {
+        outNetpara->dhcp = addr.ipv4.addr_type;
+        os_strcpy(outNetpara->ip, inet_ntoa(addr.ipv4.address));
+        os_strcpy(outNetpara->mask, inet_ntoa(addr.ipv4.netmask));
+        os_strcpy(outNetpara->gate, inet_ntoa(addr.ipv4.gw));
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,"os_strcpy(outNetpara->mask, inet_ntoa(addr.ipv4.netmask));",120,?,"        outNetpara->dhcp = addr.ipv4.addr_type;
+        os_strcpy(outNetpara->ip, inet_ntoa(addr.ipv4.address));
+        os_strcpy(outNetpara->mask, inet_ntoa(addr.ipv4.netmask));
+        os_strcpy(outNetpara->gate, inet_ntoa(addr.ipv4.gw));
+        os_strcpy(outNetpara->dns, inet_ntoa(addr.ipv4.dns1));
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,"os_strcpy(outNetpara->gate, inet_ntoa(addr.ipv4.gw));",120,?,"        os_strcpy(outNetpara->ip, inet_ntoa(addr.ipv4.address));
+        os_strcpy(outNetpara->mask, inet_ntoa(addr.ipv4.netmask));
+        os_strcpy(outNetpara->gate, inet_ntoa(addr.ipv4.gw));
+        os_strcpy(outNetpara->dns, inet_ntoa(addr.ipv4.dns1));
+    }
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\func\wlan_ui\wlan_ui.c,"os_strcpy(outNetpara->dns, inet_ntoa(addr.ipv4.dns1));",120,?,"        os_strcpy(outNetpara->mask, inet_ntoa(addr.ipv4.netmask));
+        os_strcpy(outNetpara->gate, inet_ntoa(addr.ipv4.gw));
+        os_strcpy(outNetpara->dns, inet_ntoa(addr.ipv4.dns1));
+    }
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\str_arch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\str_arch.c,"char *os_strcpy(char *out, const char *in)",120,?,"}
+
+char *os_strcpy(char *out, const char *in)
+{
+    return strcpy(out, in);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\str_arch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\str_arch.c,"return strcpy(out, in);",120,1,"char *os_strcpy(char *out, const char *in)
+{
+    return strcpy(out, in);
+}
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\include\str_pub.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\bk7231n_os\beken378\os\include\str_pub.h,"char *os_strcpy(char *out, const char *in);",120,?,"UINT32 os_strtoul(const char *nptr, char **endptr, int base);
+
+char *os_strcpy(char *out, const char *in);
+
+char *os_strchr(const char *s, int c);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\tree.h,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\toolchain\gcc-arm-none-eabi-4_9-2015q1\lib\gcc\arm-none-eabi\4.9.3\plugin\include\tree.h,"extern tree fold_builtin_strcpy (location_t, tree, tree, tree, tree);",120,?,"extern tree fold_call_expr (location_t, tree, bool);
+extern tree fold_builtin_fputs (location_t, tree, tree, bool, bool, tree);
+extern tree fold_builtin_strcpy (location_t, tree, tree, tree, tree);
+extern tree fold_builtin_strncpy (location_t, tree, tree, tree, tree, tree);
+extern tree fold_builtin_strcat (location_t, tree, tree, tree);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_common\tuya_main.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_common\tuya_main.c,"strcpy(init_param.sys_env, TARGET_PLATFORM);",120,?,"    TY_INIT_PARAMS_S init_param = {0};
+    init_param.init_db = FALSE;
+    strcpy(init_param.sys_env, TARGET_PLATFORM);
+    TUYA_CALL_ERR_LOG(tuya_iot_init_params(NULL, &init_param));
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_bt.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_bt.c,"strcpy(name, (char *)buffer);",120,1,"            if (GAP_AD_TYPE_COMPLETE_NAME == type) {
+                buffer[length - 1] = '\0';
+                strcpy(name, (char *)buffer);
+                //PR_DEBUG(""GAP_ADTYPE_LOCAL_NAME_XXX: %s\n\r"", buffer);
+                return OPRT_OS_ADAPTER_OK;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_bt.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_bt.c,"strcpy(ble_scan_info->name, name);",120,?,"    if (ble_scan_found) {
+        memcpy(ble_scan_info->bd_addr, recv_adv->adv_addr, 6);
+        strcpy(ble_scan_info->name, name);
+        ble_scan_info->channel = 0;
+        ble_scan_info->rssi = recv_adv->rssi;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy(ip->ip, wNetConfig.ip);",120,?,"    if (OPRT_OS_ADAPTER_OK == ret) {
+        bk_wlan_get_ip_status(&wNetConfig, iface);
+        os_strcpy(ip->ip, wNetConfig.ip);
+        os_strcpy(ip->mask, wNetConfig.mask);
+        os_strcpy(ip->gw, wNetConfig.gate);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy(ip->mask, wNetConfig.mask);",120,?,"        bk_wlan_get_ip_status(&wNetConfig, iface);
+        os_strcpy(ip->ip, wNetConfig.ip);
+        os_strcpy(ip->mask, wNetConfig.mask);
+        os_strcpy(ip->gw, wNetConfig.gate);
+    }
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy(ip->gw, wNetConfig.gate);",120,?,"        os_strcpy(ip->ip, wNetConfig.ip);
+        os_strcpy(ip->mask, wNetConfig.mask);
+        os_strcpy(ip->gw, wNetConfig.gate);
+    }
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy((char *)wNetConfig.wifi_ssid, (const char *)ssid);",120,?,"    os_memset(&wNetConfig, 0x0, sizeof(network_InitTypeDef_st));
+
+    os_strcpy((char *)wNetConfig.wifi_ssid, (const char *)ssid);
+    os_strcpy((char *)wNetConfig.wifi_key, (const char *)passwd);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy((char *)wNetConfig.wifi_key, (const char *)passwd);",120,?,"
+    os_strcpy((char *)wNetConfig.wifi_ssid, (const char *)ssid);
+    os_strcpy((char *)wNetConfig.wifi_key, (const char *)passwd);
+
+    wNetConfig.wifi_mode = STATION;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy((char *)wNetConfig.local_ip_addr, ""192.168.175.1"");",120,?,"        os_memcpy((char *)wNetConfig.wifi_key, cfg->passwd, cfg->p_len);
+
+        os_strcpy((char *)wNetConfig.local_ip_addr, ""192.168.175.1"");
+        os_strcpy((char *)wNetConfig.net_mask, ""255.255.255.0"");
+        os_strcpy((char *)wNetConfig.gateway_ip_addr, ""192.168.175.1"");
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy((char *)wNetConfig.net_mask, ""255.255.255.0"");",120,?,"
+        os_strcpy((char *)wNetConfig.local_ip_addr, ""192.168.175.1"");
+        os_strcpy((char *)wNetConfig.net_mask, ""255.255.255.0"");
+        os_strcpy((char *)wNetConfig.gateway_ip_addr, ""192.168.175.1"");
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, ""192.168.175.1"");
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy((char *)wNetConfig.gateway_ip_addr, ""192.168.175.1"");",120,?,"        os_strcpy((char *)wNetConfig.local_ip_addr, ""192.168.175.1"");
+        os_strcpy((char *)wNetConfig.net_mask, ""255.255.255.0"");
+        os_strcpy((char *)wNetConfig.gateway_ip_addr, ""192.168.175.1"");
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, ""192.168.175.1"");
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231n\platforms\bk7231n\tuya_os_adapter\src\driver\tuya_os_adapt_wifi.c,"os_strcpy((char *)wNetConfig.dns_server_ip_addr, ""192.168.175.1"");",120,?,"        os_strcpy((char *)wNetConfig.net_mask, ""255.255.255.0"");
+        os_strcpy((char *)wNetConfig.gateway_ip_addr, ""192.168.175.1"");
+        os_strcpy((char *)wNetConfig.dns_server_ip_addr, ""192.168.175.1"");
+
+        LOG_DEBUG(""ssid:%s key:%s  channnel: %d\r\n"", wNetConfig.wifi_ssid, wNetConfig.wifi_key,wNetConfig.channel);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy(cHSVTemp, cStrTemp);",120,0,"    PR_DEBUG(""default color HSV %d %d %d "", usHTemp, usSTemp, usVTemp);
+    vNum2Str(4, usHTemp, 5, cStrTemp);
+    strcpy(cHSVTemp, cStrTemp);
+
+    vNum2Str(4, usSTemp, 5, cStrTemp);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy((CHAR_T*)&tLightCtrlData.tColorOrigin.ucColorStr, cHSVTemp);",120,?,"    vNum2Str(4, usVTemp, 5, cStrTemp);
+    strcat(cHSVTemp, cStrTemp);
+    strcpy((CHAR_T*)&tLightCtrlData.tColorOrigin.ucColorStr, cHSVTemp);
+    PR_DEBUG(""default color origin string %s"", tLightCtrlData.tColorOrigin.ucColorStr);
+    tLightCtrlData.tColorOrigin.usHue = usHTemp;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy((CHAR_T*)&tLightCtrlData.tColorOrigin.ucColorStr, (CHAR_T*)&tAPPData.tColorOrigin.ucColorStr);",120,?,"        tLightCtrlData.tColorOrigin.usSat = tAPPData.tColorOrigin.usSat;
+        tLightCtrlData.tColorOrigin.usValue = tAPPData.tColorOrigin.usValue;
+        strcpy((CHAR_T*)&tLightCtrlData.tColorOrigin.ucColorStr, (CHAR_T*)&tAPPData.tColorOrigin.ucColorStr);
+        memcpy(&tLightCtrlData.cScene, &tAPPData.cScene, SIZEOF(tAPPData.cScene));
+        tLightCtrlData.bSceneFirstSet = TRUE;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy(cLastSceneData, (CHAR_T *)&tLightCtrlData.cScene);",120,0,"    CHAR_T cLastSceneData[SCENE_MAX_LENGTH + 1] = {0};
+
+    strcpy(cLastSceneData, (CHAR_T *)&tLightCtrlData.cScene);
+
+    if((strlen(pSceneData) < SCENE_MIN_LENGTH) || (strlen(pSceneData) > SCENE_MAX_LENGTH)) {
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy((CHAR_T*)&tLightCtrlData.cScene, pSceneData);",120,0,"    }
+
+    strcpy((CHAR_T*)&tLightCtrlData.cScene, pSceneData);
+    PR_DEBUG(""light ctrl scene buf %s"", tLightCtrlData.cScene);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy(pSceneData, (CHAR_T*)&tLightCtrlData.cScene);",120,1,"    PR_DEBUG(""str len %d"", strlen(tLightCtrlData.cScene));
+
+    strcpy(pSceneData, (CHAR_T*)&tLightCtrlData.cScene);
+
+    return LIGHT_OK;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy((CHAR_T*)&tLightCtrlData.cRealTimeData, pRealTimeData);",120,0,"    }
+
+    strcpy((CHAR_T*)&tLightCtrlData.cRealTimeData, pRealTimeData);
+    PR_DEBUG(""light real time adjust ctrl data buf %s"",tLightCtrlData.cRealTimeData);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\apps\bk7231t_light_pwm_demo\src\light_app\light_control.c,"strcpy((CHAR_T*)&tSaveData.tColorOrigin.ucColorStr, (CHAR_T*)&tLightCtrlData.tColorOrigin.ucColorStr);",120,?,"    tSaveData.tColorOrigin.usSat = tLightCtrlData.tColorOrigin.usSat;
+    tSaveData.tColorOrigin.usValue  = tLightCtrlData.tColorOrigin.usValue;
+    strcpy((CHAR_T*)&tSaveData.tColorOrigin.ucColorStr, (CHAR_T*)&tLightCtrlData.tColorOrigin.ucColorStr);
+    memcpy(&tSaveData.cScene, &tLightCtrlData.cScene, SIZEOF(tLightCtrlData.cScene));
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\driver\usb\src\systems\none\afs\board.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\driver\usb\src\systems\none\afs\board.c,"os_strcpy(pUds.aIsrName, ""MUSB-"");",120,?,"
+    /* assign the interrupt */
+    os_strcpy(pUds.aIsrName, ""MUSB-"");
+    pUds.aIsrName[5] = '0' + MGC_bAfsUdsCount;
+    pUds.aIsrName[6] = (char)0;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,"os_strcpy(bssid_info.pwd, g_rl_sta_key);",120,?,"		strcat(bssid_info.psk, temp);
+	}
+	os_strcpy(bssid_info.pwd, g_rl_sta_key);
+
+	flash_hdl = ddev_open(FLASH_DEV_NAME, &status, 0);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,"os_strcpy((char*)inNetworkInitParaAdv.ap_info.ssid, bssid_info->ssid);",120,?,"	os_memset(&inNetworkInitParaAdv, 0, sizeof(inNetworkInitParaAdv));
+	
+	os_strcpy((char*)inNetworkInitParaAdv.ap_info.ssid, bssid_info->ssid);
+	os_memcpy(inNetworkInitParaAdv.ap_info.bssid, bssid_info->bssid, 6);
+	inNetworkInitParaAdv.ap_info.security = bssid_info->security;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,"os_strcpy((char*)inNetworkInitParaAdv.key, bssid_info->pwd);",120,?,"	if(bssid_info->security < SECURITY_TYPE_WPA_TKIP)
+	{
+		os_strcpy((char*)inNetworkInitParaAdv.key, bssid_info->pwd);
+		inNetworkInitParaAdv.key_len = os_strlen(bssid_info->pwd);
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,"os_strcpy((char*)inNetworkInitParaAdv.key, bssid_info->psk);",120,?,"	else
+	{
+		os_strcpy((char*)inNetworkInitParaAdv.key, bssid_info->psk);
+		inNetworkInitParaAdv.key_len = os_strlen(bssid_info->psk);
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\bk7231t_os\beken378\func\joint_up\role_launch.c,"os_strcpy(g_rl_sta_key, req->descr.wifi_key);",120,?,"			#if RL_SUPPORT_FAST_CONNECT
+			os_memset(&g_rl_sta_key, 0, sizeof(g_rl_sta_key));
+			os_strcpy(g_rl_sta_key, req->descr.wifi_key);
+			rl_read_bssid_info(&bssid_info);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_common\src\gpio_test.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_common\src\gpio_test.c,"strcpy(ptemp, ""\""G\"":["");",120,1,"                *ptemp ++ = ',';
+            else {
+                strcpy(ptemp, ""\""G\"":["");
+                ptemp += strlen(out);
+            }
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_common\src\tuya_main.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_common\src\tuya_main.c,"strcpy(init_param.sys_env, ""BK7231S_2M"");",120,1,"    TY_INIT_PARAMS_S init_param = {0};
+    init_param.init_db = FALSE;
+    strcpy(init_param.sys_env, ""BK7231S_2M"");
+    op_ret = tuya_iot_init_params(NULL, &init_param);
+    if(OPRT_OK != op_ret) {
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy(item->ssid, scan_rst_ptr->ssid);",120,?,"        item->rssi = scan_rst_ptr->level;
+        os_memcpy(item->bssid, scan_rst_ptr->bssid, 6);
+        os_strcpy(item->ssid, scan_rst_ptr->ssid);
+        item->s_len = os_strlen(item->ssid);
+    }
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy((char *)wNetConfig.ip, ip->ip);",120,?,"
+	if ( ret ==  OPRT_OK ) {
+		os_strcpy((char *)wNetConfig.ip, ip->ip);
+		os_strcpy((char *)wNetConfig.mask, ip->mask);
+		os_strcpy((char *)wNetConfig.gate, ip->gw);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy((char *)wNetConfig.mask, ip->mask);",120,?,"	if ( ret ==  OPRT_OK ) {
+		os_strcpy((char *)wNetConfig.ip, ip->ip);
+		os_strcpy((char *)wNetConfig.mask, ip->mask);
+		os_strcpy((char *)wNetConfig.gate, ip->gw);
+		os_strcpy((char *)wNetConfig.dns, ip->ip);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy((char *)wNetConfig.gate, ip->gw);",120,?,"		os_strcpy((char *)wNetConfig.ip, ip->ip);
+		os_strcpy((char *)wNetConfig.mask, ip->mask);
+		os_strcpy((char *)wNetConfig.gate, ip->gw);
+		os_strcpy((char *)wNetConfig.dns, ip->ip);
+		bk_wlan_set_ip_status(&wNetConfig, iface);
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy((char *)wNetConfig.dns, ip->ip);",120,?,"		os_strcpy((char *)wNetConfig.mask, ip->mask);
+		os_strcpy((char *)wNetConfig.gate, ip->gw);
+		os_strcpy((char *)wNetConfig.dns, ip->ip);
+		bk_wlan_set_ip_status(&wNetConfig, iface);
+	}
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy((char *)wNetConfig.wifi_ssid, ssid);",120,?,"	os_memset(&wNetConfig, 0x0, sizeof(network_InitTypeDef_st));
+
+	os_strcpy((char *)wNetConfig.wifi_ssid, ssid);
+	os_strcpy((char *)wNetConfig.wifi_key, passwd);
+
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy((char *)wNetConfig.wifi_key, passwd);",120,?,"
+	os_strcpy((char *)wNetConfig.wifi_ssid, ssid);
+	os_strcpy((char *)wNetConfig.wifi_key, passwd);
+
+	wNetConfig.wifi_mode = STATION;
+",
+2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,Dataset Download,../../Dataset Download/2021\tuya-iotos-embeded-sdk-wifi-ble-bk7231t\platforms\bk7231t\tuya_os_adapter\src\driver\tuya_hal_wifi.c,"os_strcpy(country_code, country.cc);",120,?,"	
+    bk_wlan_get_country(&country);
+	os_strcpy(country_code, country.cc);
+}
+
+",
+2021\univ-csProject\DB+C_POS Implement\res_pos.c,Dataset Download,../../Dataset Download/2021\univ-csProject\DB+C_POS Implement\res_pos.c,"strcpy(q_date, date);",120,1,"
+	Usequery(query);
+	strcpy(q_date, date);
+
+	//printf(""%s\n\n"",query);
+",
+2021\univ-csProject\DB+C_POS Implement\res_pos.c,Dataset Download,../../Dataset Download/2021\univ-csProject\DB+C_POS Implement\res_pos.c,"strcpy(q_menuPrice,row[i]);",120,1,"		row = mysql_fetch_row(res);
+		for(i=0;i<fields;i++)
+			strcpy(q_menuPrice,row[i]);
+	}
+	memset(query, 0, sizeof(query));
+",
+2021\univ-csProject\DB+C_POS Implement\res_pos.c,Dataset Download,../../Dataset Download/2021\univ-csProject\DB+C_POS Implement\res_pos.c,"strcpy(infoMenu_Name, menuName);",120,1,"	fgets(menuName, sizeof(menuName), stdin);
+	menuName[strlen(menuName) - 1] = '\0';
+	strcpy(infoMenu_Name, menuName);
+}
+void input_infoMenu_least(char *infoMenu_Type, char *infoMenu_ID)
+",
+2021\univ-csProject\DB+C_POS Implement\res_pos.c,Dataset Download,../../Dataset Download/2021\univ-csProject\DB+C_POS Implement\res_pos.c,"strcpy(desc, date);",120,1,"	fgets(date, sizeof(date), stdin);
+	date[strlen(date) - 1] = '\0';
+	strcpy(desc, date);
+}
+
+",
+2021\univ-csProject\DB+C_POS Implement\res_pos.c,Dataset Download,../../Dataset Download/2021\univ-csProject\DB+C_POS Implement\res_pos.c,"strcpy(nextID, ""1"");",120,1,"			if(i == fields -1){
+				if(row[i] == NULL){
+					strcpy(nextID, ""1"");
+					break;
+				}
+",
+2021\univ-csProject\DB+C_POS Implement\res_pos.c,Dataset Download,../../Dataset Download/2021\univ-csProject\DB+C_POS Implement\res_pos.c,"strcpy(nextID,row[i]);",120,1,"					break;
+				}
+				strcpy(nextID,row[i]);
+			}
+		}
+",
+2021\virtual-festo-twin\Zedboard\vsp_tcp\client.cpp,Dataset Download,../../Dataset Download/2021\virtual-festo-twin\Zedboard\vsp_tcp\client.cpp,"strcpy(buffer, ""128909"");",120,0,"    
+    // Send the current data of the VSP.
+    strcpy(buffer, ""128909"");
+    send(client, buffer, bufsize, 0);
+
+",
+2021\virtual-festo-twin\Zedboard\vsp_tcp\server.cpp,Dataset Download,../../Dataset Download/2021\virtual-festo-twin\Zedboard\vsp_tcp\server.cpp,"strcpy(clientip, inet_ntoa(client_addr.sin_addr));",120,?,"        int res = getpeername(client_socket, (struct sockaddr *)&client_addr, &addr_size);
+        char *clientip = new char[20];
+        strcpy(clientip, inet_ntoa(client_addr.sin_addr));
+
+#ifdef DEBUG
+",
+2021\x-cube-subg2\Drivers\CMSIS\DSP\DSP_Lib_TestSuite\Common\JTest\inc\jtest_fw.h,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Drivers\CMSIS\DSP\DSP_Lib_TestSuite\Common\JTest\inc\jtest_fw.h,"strcpy(JTEST_FW.buf_name, (value));     \",120,1,"    {                                           \
+        JTEST_CLEAR_BUFFER(buf_name);           \
+        strcpy(JTEST_FW.buf_name, (value));     \
+        JTEST_TRIGGER_ACTION(action);           \
+    } while (0)
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\slip-config.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\slip-config.c,"strcpy(slip_config_tundev, ""tun0"");",120,0,"  if(*slip_config_tundev == '\0') {
+    /* Use default. */
+    strcpy(slip_config_tundev, ""tun0"");
+  }
+  return 1;
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\tun-bridge.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\tun-bridge.c,"strcpy(t, ""/dev/"");",120,0,"{
+  char t[32];
+  strcpy(t, ""/dev/"");
+  strncat(t, dev, sizeof(t) - 5);
+  return open(t, flags);
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\tun-bridge.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\services\rpl-border-router\native\tun-bridge.c,"strcpy(dev, ifr.ifr_name);",120,?,"    return err;
+  }
+  strcpy(dev, ifr.ifr_name);
+  return fd;
+}
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\aql-adt.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\aql-adt.c,"strcpy(attr->name, name);",120,0,"  }
+
+  strcpy(attr->name, name);
+  attr->domain = domain;
+  attr->element_size = element_size;
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\storage-cfs.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\storage-cfs.c,"strcpy(dest, prefix);",120,1,"merge_strings(char *dest, char *prefix, char *suffix)
+{
+  strcpy(dest, prefix);
+  strcat(dest, suffix);
+}
+",
+2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\storage-cfs.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Middlewares\Third_Party\Contiki-NG\os\storage\antelope\storage-cfs.c,"strcpy(record.attribute_name, index->attr->name);",120,?,"  }
+
+  strcpy(record.attribute_name, index->attr->name);
+  memcpy(record.file_name, index->descriptor_file, sizeof(record.file_name));
+  record.type = index->type;
+",
+2021\x-cube-subg2\Utilities\PC_Software\Contiki-NG\serial-io\tunslip6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Utilities\PC_Software\Contiki-NG\serial-io\tunslip6.c,"strcpy(tundev, ""tap0"");",120,0,"    /* Use default. */
+    if(tap) {
+      strcpy(tundev, ""tap0"");
+    } else {
+      strcpy(tundev, ""tun0"");
+",
+2021\x-cube-subg2\Utilities\PC_Software\Contiki-NG\serial-io\tunslip6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Utilities\PC_Software\Contiki-NG\serial-io\tunslip6.c,"strcpy(tundev, ""tun0"");",120,0,"      strcpy(tundev, ""tap0"");
+    } else {
+      strcpy(tundev, ""tun0"");
+    }
+  }
+",
+2021\x-cube-subg2\Utilities\PC_Software\wpcapslip6\wpcap6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Utilities\PC_Software\wpcapslip6\wpcap6.c,"strcpy(buffer,""\\Device\\NPF_"");",120,0,"			printf(""Using local network interface: %s\n"",interface_name);
+
+			strcpy(buffer,""\\Device\\NPF_"");
+			strncat(buffer,adapters->AdapterName,200);
+			pcap = pcap_open_live(buffer, sizeof(buffer), 0, -1, error);
+",
+2021\x-cube-subg2\Utilities\PC_Software\wpcapslip6\wpcapslip6.c,Dataset Download,../../Dataset Download/2021\x-cube-subg2\Utilities\PC_Software\wpcapslip6\wpcapslip6.c,"strcpy(ipaddr, str_addr);",120,1,"        strcat(str_addr,substr);
+    }
+    strcpy(ipaddr, str_addr);
+
+    return 0;
+",
