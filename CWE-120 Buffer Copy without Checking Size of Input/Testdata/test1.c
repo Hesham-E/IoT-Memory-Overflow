@@ -3,10 +3,9 @@
 #include <string.h>
 
 void flushInput();
-
+const int SIZE = 10;
 int main ()
 {
-    const int SIZE = 10;
     int shift;
     char input[SIZE];
     char shiftedInput[SIZE - 1];
